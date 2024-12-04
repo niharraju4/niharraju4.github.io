@@ -3,30 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Home</title>
+    <title>Nihar M - Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        /* Navigation Bar Styling - Black background specifically for header */
+        nav {
+            background-color: #000000 !important;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            padding: 10px 0;
         }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        /* Footer Styling - Black background specifically for footer */
+        footer {
+            background-color: #000000 !important;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #ff6347;
+        }
+
+        /* Fix for content being hidden behind navbar */
+        .content {
+            padding-top: 80px;
+        }
+
+        /* Light background for the whole body */
+        body {
+            background-color: #ffffff;
+        }
+
+        /* Custom styles for the project containers */
+        .project-container {
+            background-color: white;
+            border-radius: 0px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+
+        .project-image {
+            width: 40%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .project-details {
+            width: 60%;
+            padding-left: 20px;
+            color: black;
+        }
+
+        .project-details h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .tech-container {
+            display: inline-block;
+            background-color: #eee;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-gray-100 to-gray-200 font-sans leading-relaxed">
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 bg-black text-white z-50">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+<body class="text-white">
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
             <div class="text-2xl font-bold">Nihar M</div>
             <div class="space-x-4">
                 <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
@@ -36,90 +131,99 @@
         </div>
     </nav>
 
-    <!-- Main Content Container -->
-    <div class="pt-20 min-h-screen overflow-y-auto">
-        <!-- Hero Section -->
-        <section class="max-w-6xl mx-auto px-4 py-12">
-            <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center right-align">My Projects</h1>
-            
-            <div class="space-y-8">
-                <!-- Project 1 -->
-                <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden transition hover:shadow-xl">
-                    <!-- Left: Project Image -->
-                    <div class="w-full md:w-1/2 bg-gray-200">
-                        <img src="project1.jpg" alt="E-Commerce Platform" class="w-full h-full object-cover">
-                    </div>
-                    <!-- Right: Project Details -->
-                    <div class="p-6 md:w-1/2">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-3">E-Commerce Platform</h2>
-                        <p class="text-gray-600 mb-4">
-                            Full-stack e-commerce website with React and Node.js. A comprehensive platform to handle products, shopping cart, and checkout functionalities.
-                        </p>
-                        
-                        <div class="mb-4">
-                            <span class="font-semibold text-gray-700">Technologies:</span>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="px-3 py-1 bg-blue-50 text-blue-800 rounded-full text-sm">React</span>
-                                <span class="px-3 py-1 bg-blue-50 text-blue-800 rounded-full text-sm">Node.js</span>
-                                <span class="px-3 py-1 bg-blue-50 text-blue-800 rounded-full text-sm">MongoDB</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex space-x-4 mt-4">
-                            <a href="https://github.com/username/project1" class="text-gray-700 hover:text-blue-600 transition">
-                                🐱 GitHub
-                            </a>
-                            <a href="https://project1.github.io" class="text-gray-700 hover:text-blue-600 transition">
-                                🔗 Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Main Content -->
+    <div class="content">
+        <div class="grid-container py-10">
+            <h1 class="text-center text-4xl font-bold mb-10">Projects</h1>
 
-                <!-- Project 2 -->
-                <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden transition hover:shadow-xl">
-                    <!-- Left: Project Image -->
-                    <div class="w-full md:w-1/2 bg-gray-200">
-                        <img src="project2.jpg" alt="Task Management App" class="w-full h-full object-cover">
-                    </div>
-                    <!-- Right: Project Details -->
-                    <div class="p-6 md:w-1/2">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-3">Task Management App</h2>
-                        <p class="text-gray-600 mb-4">
-                            Kanban-style task management application with real-time updates. Create, manage, and track tasks in an interactive, user-friendly interface.
-                        </p>
-                        
-                        <div class="mb-4">
-                            <span class="font-semibold text-gray-700">Technologies:</span>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="px-3 py-1 bg-blue-50 text-blue-800 rounded-full text-sm">React</span>
-                                <span class="px-3 py-1 bg-blue-50 text-blue-800 rounded-full text-sm">Firebase</span>
-                                <span class="px-3 py-1 bg-blue-50 text-blue-800 rounded-full text-sm">Tailwind CSS</span>
+            <!-- ML Projects -->
+            <div id="ml" class="category-projects">
+                <h2 class="text-3xl font-semibold mb-4">
+                    <a href="ml_projects.html" class="text-gray-300 hover:text-white transition">Machine Learning Projects</a>
+                </h2>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell large-6 medium-12">
+                        <a href="ml_projects.html" class="project-container">
+                            <img src="project1.jpg" alt="ML Project 1" class="project-image">
+                            <div class="project-details">
+                                <h4>ML Project 1</h4>
+                                <span class="primary">2023</span>
+                                <p class="project-description">This is a machine learning project that aims to...</p>
+                                <div>
+                                    <div class="tech-container">Python</div>
+                                    <div class="tech-container">TensorFlow</div>
+                                    <div class="tech-container">Scikit-Learn</div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="flex space-x-4 mt-4">
-                            <a href="https://github.com/username/project2" class="text-gray-700 hover:text-blue-600 transition">
-                                🐱 GitHub
-                            </a>
-                            <a href="https://project2.github.io" class="text-gray-700 hover:text-blue-600 transition">
-                                🔗 Live Demo
-                            </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- DL Projects -->
+            <div id="dl" class="category-projects">
+                <h2 class="text-3xl font-semibold mb-4">
+                    <a href="dl_project1.html" class="text-gray-300 hover:text-white transition">Deep Learning Projects</a>
+                </h2>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell large-6 medium-12">
+                        <a href="dl_project1.html" class="project-container">
+                            <img src="project2.jpg" alt="DL Project 1" class="project-image">
+                            <div class="project-details">
+                                <h4>DL Project 1</h4>
+                                <span class="primary">2023</span>
+                                <p class="project-description">This project focuses on deep learning techniques...</p>
+                                <div>
+                                    <div class="tech-container">Python</div>
+                                    <div class="tech-container">Keras</div>
+                                    <div class="tech-container">TensorFlow</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NLP Projects -->
+            <div id="nlp" class="category-projects">
+                <h2 class="text-3xl font-semibold mb-4">
+                    <a href="nlp_projects.html" class="text-gray-300 hover:text-white transition">NLP Projects</a>
+                </h2>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell large-6 medium-12">
+                        <a href="nlp_project1.html" class="project-container">
+                            <img src="project3.jpg" alt="NLP Project 1" class="project-image">
+                            <div class="project-details">
+                                <h4>NLP Project 1</h4>
+                                <span class="primary">2023</span>
+                                <p class="project-description">This NLP project applies text classification...</p>
+                                <div>
+                                    <div class="tech-container">Python</div>
+                                    <div class="tech-container">NLTK</div>
+                                    <div class="tech-container">spaCy</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
+   
+
     <!-- Footer -->
-    <footer class="bg-black text-white py-6 text-center">
+    <footer>
         <p>© 2024 Nihar M. All Rights Reserved.</p>
-        <div class="mt-4 space-x-4">
-            <a href="https://github.com/nihar" class="text-gray-300 hover:text-white">GitHub</a>
-            <a href="https://linkedin.com/in/nihar-m" class="text-gray-300 hover:text-white">LinkedIn</a>
-            <a href="mailto:nihar@example.com" class="text-gray-300 hover:text-white">Email</a>
-        </div>
+        <p>
+            <a href="https://github.com/nihar" class="text-white hover:text-gray-300">GitHub</a> |
+            <a href="https://linkedin.com/in/nihar-m" class="text-white hover:text-gray-300">LinkedIn</a> |
+            <a href="mailto:nihar@example.com" class="text-white hover:text-gray-300">Email</a>
+        </p>
     </footer>
+
+    <!-- Foundation JS -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
 </body>
 </html>
