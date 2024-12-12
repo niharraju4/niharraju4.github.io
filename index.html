@@ -10,7 +10,285 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
-        ::-webkit-scrollbar-track {
+        ::-webkit-scrollbar-track {<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfolio</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <style>
+      body {
+         background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: cover;
+         font-family: 'Open Sans Condensed', sans-serif;
+      }
+      .menu {
+         padding: 19px 20px;
+         text-align: right;
+         background: #000000;
+      }
+      .menu ul {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+      }
+      .menu li {
+         display: inline-block;
+         margin: 0 15px;
+      }
+      .menu a {
+         font-size: 22px;
+         text-transform: uppercase;
+         text-decoration: none;
+         color: #fff;
+         position: relative;
+         padding: 4px 0;
+      }
+      .menu a::before {
+         content: "";
+         width: 100%;
+         height: 4px;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         background: #fff;
+         transition: 0.5s transform ease;
+         transform: scale3d(0, 1, 1);
+         transform-origin: 0 50%;
+      }
+
+      .menu a:hover::before {
+         transform: scale3d(1, 1, 1);
+      }
+      .menu a:hover {
+         color: #E91E63;
+      }
+      .menu a::before {
+         background: #E91E63;
+      }
+   </style>
+</head>
+
+
+
+<body>
+   <!-- Navigation Menu -->
+   <nav class="menu">
+      <ul>
+         <li><a href="#home">Home</a></li>
+         <li><a href="waste.html">Projects</a></li>
+         <li><a href="#cv">CV</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+   </nav>
+
+  <!-- Hero Section -->
+  
+  <div class="px-4 py-8 bg-gray-100">
+   <section id="home" class="grid md:grid-cols-2 gap-2 px-4 py-2">
+       <!-- Profile Photo -->
+       <div class="flex justify-center items-center">
+           <img src="profile.jpg" alt="Profile" class="w-72 h-72 rounded-full object-cover shadow-2xl border-4 border-white">
+       </div>
+       <!-- Hero Content -->
+       <div class="flex flex-col justify-center bg-white p-6 rounded-lg shadow-lg">
+           <h1 class="text-5xl font-bold text-gray-800 mb-4">
+               Hi, I'm <span class="text-blue-600">Nihar Muniraju</span>
+           </h1>
+           <h2 class="text-2xl text-gray-600 mb-6">About</h2>
+           <p class="mb-6 text-justify">
+               I am a passionate and dedicated Machine Learning engineer with expertise in Data Science, Deep Learning, Computer Vision, NLP, and Generative AI. Throughout my journey, I have developed and deployed innovative machine learning models to solve complex problems. I am fascinated by AI's practical applications and have focused on developing intelligent systems that adapt seamlessly to real-world situations, including AI-powered automation and predictive analytics.
+               I'm currently exploring the latest Advanced Transformers and Generative AI for Innovative RAG Applications in Therapy and Financial Analysis. I am deeply engaged in learning and applying the latest advancements in transformer architectures and generative AI, training and fine-tuning models such as Ollama, GPT, Mistral, Gemini, and others. My work focuses on developing Retrieval-Augmented Generation (RAG) applications, particularly in the fields of therapy and stock market analysis, where AI-driven insights are revolutionizing decision-making processes and enhancing personalized experiences.
+           </p>
+       </div>
+   </section>  
+</div>
+
+   
+      <!-- Education Section -->
+      <section id="education" class="py-4">
+         <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Education</h3>
+            <div class="mb-4">
+               <h4 class="text-lg font-semibold text-gray-800">M.S.in Computer Science Specialization in ML and AI</h4>
+               <p class="text-sm text-gray-500 mb-1">DePaul University, Chicago, IL (Sept 2021 - Jun 2024)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Advanced Machine Learning</li>
+                  <li>Machine Learning Programming</li>
+                  <li>Artificial Intelligence</li>
+                  <li>Data Science</li>
+               </ul>
+            </div>
+            <div>
+               <h4 class="text-lg font-semibold text-gray-800">B.E. in Electronics and Communication</h4>
+               <p class="text-sm text-gray-500 mb-1">BMS Institute of Technology & Management, Bengaluru, India ( Aug 2015 - Aug 2020)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>ARM Microcontroller</li>
+                  <li>Satellite Communication</li>
+                  <li>Wireless Cellular and LTE 4G</li>
+                  <li>Digital Image Processing</li>
+               </ul>
+            </div>
+         </div>
+      </section>
+      <!-- Experience Section -->
+      <section id="experience" class="py-4">
+         <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Experience</h3>
+      
+            <!-- Gen AI Engineer -->
+            <div class="mb-4">
+               <h4 class="text-lg font-semibold text-gray-800">Gen AI Engineer</h4>
+               <p class="text-sm text-gray-500 mb-1">Samarthanam USA (Jun 2020 - Dec 2021)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Created an AI-based audio learning platform to empower children with disabilities, transforming educational content into natural, high-quality audio and fostering an inclusive learning environment.</li>
+                  <li>Enhanced interactivity through advanced AI and intuitive voice controls, enabling students to navigate lessons, ask questions, and engage with content seamlessly, with fluid, context-aware NLP-driven conversations.</li>
+                  <li>Incorporated multilingual support, ensuring accessibility for diverse learners by catering to various languages and accents, making education inclusive and globally relevant.</li>
+               </ul>
+            </div>
+      
+            <!-- Impact Grant Research Assistant -->
+            <div class="mb-4">
+               <h4 class="text-lg font-semibold text-gray-800">Impact Grant Research Assistant</h4>
+               <p class="text-sm text-gray-500 mb-1">PUSH Studio (Jun 2020 - Dec 2021)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Developed and deployed conversational AI systems using OpenAI's GPT-4 and GPT-3.5 LLM models to handle real-time user interactions, implementing context-aware session management and database-driven response generation.</li>
+                  <li>Implemented robust JWT-based authentication for secure user management in web applications. Utilized Flask and MongoDB for efficient credential storage and management, ensuring high-security standards.</li>
+                  <li>Engineered scalable APIs for machine learning model inference and data processing. Utilized Flask to create RESTful services, optimizing performance and reliability.</li>
+                  <li>Leveraged Azure and AWS cloud platforms for deploying and managing machine learning services, ensuring scalable and reliable microservices architecture through effective utilization of cloud resources.</li>
+               </ul>
+            </div>
+
+
+            
+
+            <!-- Student Intern -->
+            <div>
+               <h4 class="text-lg font-semibold text-gray-800">Student Intern</h4>
+               <p class="text-sm text-gray-500 mb-1">Indian Institute of Science, IISc (Feb 2019 - Apr 2019)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Developed and deployed the Food Classification and Nutrient Identification (FCNI) tool, achieving 96.81% accuracy in food recognition and nutrient analysis by leveraging Convolutional Neural Networks (CNNs) and fine-tuning the model on the Food101 dataset with 1000 images per food class using Nanonets API for enhanced robustness.</li>
+                  <li>Engineered a user-centric interface using PyQt5, integrating real-time image processing, HTTP request handling, and seamless communication with the Nanonets API to provide immediate audio and visual feedback, significantly improving usability and accessibility.</li>
+                  <li>Conducted rigorous real-time testing and validation, ensuring accurate food classification and personalized dietary recommendations tailored to specific health conditions like obesity and diabetes, while enhancing the tool's reliability for practical applications.</li>
+               </ul>
+            </div>
+         </div>
+      </section>
+      
+
+    
+
+      <section id="experience" class="py-4">
+         <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+            <!-- <h3 class="text-2xl font-semibold text-gray-800 mb-4">Hobbies</h3> -->
+            <div class="mb-4">
+               <h4 class="text-lg font-semibold text-gray-800">Publications:-  </h4>
+               <!-- <p class="text-sm text-gray-500 mb-1">Activities</p> -->
+               <!-- <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Mastered the art of composition, lighting, and framing for impactful storytelling.</li>
+                  <li>Experiment with different genres like portrait, wildlife, and macro photography.</li>
+                  <li>Edit and enhance images using tools like Adobe Lightroom and Photoshop.</li>
+               </ul> -->
+            </div>
+            <div>
+               <!-- <h4 class="text-lg font-semibold text-gray-800">Exploring new cultures, cuisines, and landscapes to broaden perspectives and gain inspiration.</h4> -->
+               <!-- <p class="text-sm text-gray-500 mb-1">Activities</p> -->
+               <!-- <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Planned and documented travel itineraries to uncover hidden gems in diverse locations.</li>
+                  <li>Emphasized cultural immersion through local interactions and culinary adventures.</li>
+                  <li>Captured scenic moments through photography and journaling.</li>
+               </ul>
+            </div> -->
+            <div class="mt-4">
+               <h3 class="text-lg font-semibold text-gray-800 mb-2">IEEE Region 10 International Conference TENCON</h3>
+               <h3 class="text-lg font-semibold text-gray-800 mb-2">Personalised Food Classifier and Nutrition Interpreter Multimedia Tool Using Deep Learning</h3>
+               <a href="https://www.shutterstock.com/g/Nihar+Muniraju" target="_blank" class="text-blue-600 hover:underline block mb-2">Link: IEEE</a>
+               
+         </div>
+      </section>
+
+   <section id="experience" class="py-4">
+      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+         <!-- <h3 class="text-2xl font-semibold text-gray-800 mb-4">Hobbies</h3> -->
+         <div class="mb-4">
+            <h4 class="text-lg font-semibold text-gray-800">In my free time I like to Capture moments and emotions through the lens, focusing on both natural landscapes and urban environments.</h4>
+            <!-- <p class="text-sm text-gray-500 mb-1">Activities</p> -->
+            <!-- <ul class="list-disc pl-5 text-gray-600 leading-tight">
+               <li>Mastered the art of composition, lighting, and framing for impactful storytelling.</li>
+               <li>Experiment with different genres like portrait, wildlife, and macro photography.</li>
+               <li>Edit and enhance images using tools like Adobe Lightroom and Photoshop.</li>
+            </ul> -->
+         </div>
+         <div>
+            <!-- <h4 class="text-lg font-semibold text-gray-800">Exploring new cultures, cuisines, and landscapes to broaden perspectives and gain inspiration.</h4> -->
+            <!-- <p class="text-sm text-gray-500 mb-1">Activities</p> -->
+            <!-- <ul class="list-disc pl-5 text-gray-600 leading-tight">
+               <li>Planned and documented travel itineraries to uncover hidden gems in diverse locations.</li>
+               <li>Emphasized cultural immersion through local interactions and culinary adventures.</li>
+               <li>Captured scenic moments through photography and journaling.</li>
+            </ul>
+         </div> -->
+         <div class="mt-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">My Photography Links:-</h4>
+            <a href="https://www.shutterstock.com/g/Nihar+Muniraju" target="_blank" class="text-blue-600 hover:underline block mb-2">Shutterstock Portfolio</a>
+            <a href="https://stock.adobe.com/contributor/210800054/Nihar?asset_id=488018025" target="_blank" class="text-blue-600 hover:underline block">Adobe Stock Portfolio</a>
+         </div>
+         <div class="mt-4">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Check out my other Blogposts:-</h4>
+            <a href="https://medium.com/@niharmuniraju4" target="_blank" class="text-blue-600 hover:underline block mb-2">Medium</a>
+
+         </div>
+      </div>
+   </section>
+   
+</div>
+
+   
+   
+
+   <!-- Smooth Scroll Script -->
+   <script>
+      document.querySelectorAll('nav a').forEach(anchor => {
+         anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+               behavior: 'smooth'
+            });
+         });
+      });
+   </script>
+   <!-- Footer Section -->
+<footer class="bg-gray-800 text-gray-200 py-4">
+   <div class="max-w-4xl mx-auto text-center">
+      <p class="text-sm">&copy; 2024 Nihar Muniraju. All Rights Reserved.</p>
+      <!-- <p class="text-sm">Designed with ❤️ using Tailwind CSS</p> -->
+      <!-- <div class="flex justify-center space-x-4 mt-2">
+         <a href="https://github.com/niharraju4" target="_blank" class="text-gray-400 hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6V20c-3.2.7-3.8-1.5-3.8-1.5-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1 3 1 .1-.6.4-1 .7-1.2-2.6-.3-5.4-1.3-5.4-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.2 1 .9-.2 1.8-.3 2.8-.3s1.9.1 2.8.3c2.2-1.3 3.2-1 3.2-1 .6 1.6.2 2.9.1 3.2.7.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.4 5.7.4.3.7.9.7 1.8v2.6c0 .3.2.7.8.6A12 12 0 0 0 12 0z"/>
+            </svg>
+         </a>
+         <a href="https://linkedin.com/in/niharraju" target="_blank" class="text-gray-400 hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M19 0H5C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zm-7 19H8v-8h4v8zm-2-9c-1.2 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2zm9 9h-4v-4c0-1.1-.9-2-2-2s-2 .9-2 2v4h-4v-8h4v1c.8-.7 1.9-1 3-1 2.5 0 4 1.7 4 4v4z"/>
+            </svg>
+         </a>
+         <a href="mailto:nihar@example.com" class="text-gray-400 hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+               <path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2-10 7L2 6h20zm-10 9L2 8v10h20V8l-10 7z"/>
+            </svg>
+         </a> -->
+      </div>
+   </div>
+</footer>
+
+</body>
+</html>
+
             background: #f1f1f1;
         }
         ::-webkit-scrollbar-thumb {
