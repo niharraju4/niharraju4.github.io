@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nihar</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <style>
+         body {
+             background-image: linear-gradient(to top, #f0f4f8 0%, #D3DDE6 100%);
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;
+             font-family: 'Open Sans Condensed', sans-serif;
+         }
+     
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+     
+         .navbar {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             background-color: #000;
+             padding: 10px 20px;
+         }
+     
+         .navbar .logo {
+             color: #fff;
+             font-size: 1.5rem;
+             font-weight: bold;
+             text-decoration: none;
+         }
+     
+         .navbar ul {
+             display: flex;
+             list-style: none;
+         }
+     
+         .navbar ul li {
+             margin: 0 15px;
+         }
+     
+         .navbar ul li a {
+             color: #fff;
+             text-decoration: none;
+             font-size: 1rem;
+             transition: color 0.3s ease;
+         }
+     
+         .navbar ul li a:hover {
+             color: #1abc9c;
+         }
+     
+         .menu-toggle {
+             display: none;
+             color: #fff;
+             font-size: 1.5rem;
+             cursor: pointer;
+         }
+     
+         @media (max-width: 768px) {
+             .navbar ul {
+                 display: none;
+                 flex-direction: column;
+                 width: 100%;
+                 background-color: #000;
+                 position: absolute;
+                 top: 60px;
+                 left: 0;
+                 z-index: 1000;
+             }
+     
+             .navbar ul.active {
+                 display: flex;
+             }
+     
+             .navbar ul li {
+                 text-align: center;
+                 margin: 10px 0;
+             }
+     
+             .menu-toggle {
+                 display: block;
+             }
+         }
+     </style>
+     
+   </head>
+   <body>
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+         <a href="#" class="logo">NIHAR</a>
+         <span class="menu-toggle">&#9776;</span>
+         <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+      </nav>
+      <!-- Hero Section --> 
+      <div class="px-4 py-8 bg-gray-100">
+         <section id="home" class="grid md:grid-cols-2 gap-8 px-4 py-4 items-center">
+            <!-- Profile Photo -->
+            <div class="flex justify-center">
+               <img 
+                  src="profile.jpg" 
+                  alt="Profile picture of Nihar Muniraju" 
+                  class="w-72 h-72 rounded-full object-cover shadow-2xl border-4 border-white" >
+            </div>
+            <!-- Hero Content -->
+            <div class="flex flex-col justify-center bg-white p-6 rounded-lg shadow-lg">
+               <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">
+                  Hi, I'm <span class="text-blue-600">Nihar Muniraju</span>
+               </h1>
+               <h2 class="text-xl sm:text-2xl text-gray-600 mb-4">About</h2>
+               <p class="text-gray-700 leading-relaxed mb-6">
+                  I am a passionate and dedicated Machine Learning engineer with expertise in Data Science, Deep Learning, Computer Vision, NLP, and Generative AI. Throughout my journey, I have developed and deployed innovative machine learning models to solve complex problems. 
+                  <br><br>
+                  I am fascinated by AI's practical applications and have focused on developing intelligent systems that adapt seamlessly to real-world situations, including AI-powered automation and predictive analytics. I'm currently exploring the latest Advanced Transformers and Generative AI for Innovative RAG Applications in Therapy and Financial Analysis.
+                  <br><br>
+                  I am deeply engaged in learning and applying the latest advancements in transformer architectures and generative AI, training and fine-tuning models such as Ollama, GPT, Mistral, Gemini, and others. My work focuses on developing Retrieval-Augmented Generation (RAG) applications, particularly in the fields of therapy and stock market analysis, where AI-driven insights are revolutionizing decision-making processes and enhancing personalized experiences.
+               </p>
+            </div>
+         </section>
+      </div>
+      <!-- Education Section -->
+      <section id="education" class="py-4">
+         <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Education</h3>
+            <div class="mb-4">
+               <h4 class="text-lg font-semibold text-gray-800">M.S.in Computer Science Specialization in ML and AI</h4>
+               <p class="text-sm text-gray-500 mb-1">DePaul University, Chicago, IL (Sept 2021 - Jun 2024)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Advanced Machine Learning</li>
+                  <li>Machine Learning Programming</li>
+                  <li>Artificial Intelligence</li>
+                  <li>Data Science</li>
+               </ul>
+            </div>
+            <div>
+               <h4 class="text-lg font-semibold text-gray-800">B.E. in Electronics and Communication</h4>
+               <p class="text-sm text-gray-500 mb-1">BMS Institute of Technology & Management, Bengaluru, India ( Aug 2015 - Aug 2020)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>ARM Microcontroller</li>
+                  <li>Satellite Communication</li>
+                  <li>Wireless Cellular and LTE 4G</li>
+                  <li>Digital Image Processing</li>
+               </ul>
+            </div>
+         </div>
+      </section>
+      <!-- Experience Section -->
+      <section id="experience" class="py-4">
+         <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Experience</h3>
+            <!-- Gen AI Engineer -->
+            <div class="mb-4">
+               <h4 class="text-lg font-semibold text-gray-800">Gen AI Engineer</h4>
+               <p class="text-sm text-gray-500 mb-1">Samarthanam USA (Sep 2024  - Present)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Created an AI-based audio learning platform to empower children with disabilities, transforming educational content into natural, high-quality audio and fostering an inclusive learning environment.</li>
+                  <li>Enhanced interactivity through advanced AI and intuitive voice controls, enabling students to navigate lessons, ask questions, and engage with content seamlessly, with fluid, context-aware NLP-driven conversations.</li>
+                  <li>Incorporated multilingual support, ensuring accessibility for diverse learners by catering to various languages and accents, making education inclusive and globally relevant.</li>
+               </ul>
+            </div>
+            <!-- Impact Grant Research Assistant -->
+            <div class="mb-4">
+               <h4 class="text-lg font-semibold text-gray-800">Impact Grant Research Assistant</h4>
+               <p class="text-sm text-gray-500 mb-1">PUSH Studio (Jun 2023 - Nov 2023)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Developed and deployed conversational AI systems using OpenAI's GPT-4 and GPT-3.5 LLM models to handle real-time user interactions, implementing context-aware session management and database-driven response generation.</li>
+                  <li>Implemented robust JWT-based authentication for secure user management in web applications. Utilized Flask and MongoDB for efficient credential storage and management, ensuring high-security standards.</li>
+                  <li>Engineered scalable APIs for machine learning model inference and data processing. Utilized Flask to create RESTful services, optimizing performance and reliability.</li>
+                  <li>Leveraged Azure and AWS cloud platforms for deploying and managing machine learning services, ensuring scalable and reliable microservices architecture through effective utilization of cloud resources.</li>
+               </ul>
+            </div>
+            <!-- Student Intern -->
+            <div>
+               <h4 class="text-lg font-semibold text-gray-800">Student Intern</h4>
+               <p class="text-sm text-gray-500 mb-1">Indian Institute of Science, IISc (Feb 2019 - Apr 2019)</p>
+               <ul class="list-disc pl-5 text-gray-600 leading-tight">
+                  <li>Developed and deployed the Food Classification and Nutrient Identification (FCNI) tool, achieving 96.81% accuracy in food recognition and nutrient analysis by leveraging Convolutional Neural Networks (CNNs) and fine-tuning the model on the Food101 dataset with 1000 images per food class using Nanonets API for enhanced robustness.</li>
+                  <li>Engineered a user-centric interface using PyQt5, integrating real-time image processing, HTTP request handling, and seamless communication with the Nanonets API to provide immediate audio and visual feedback, significantly improving usability and accessibility.</li>
+                  <li>Conducted rigorous real-time testing and validation, ensuring accurate food classification and personalized dietary recommendations tailored to specific health conditions like obesity and diabetes, while enhancing the tool's reliability for practical applications.</li>
+               </ul>
+            </div>
+         </div>
+      </section>
+      <section id="experience" class="py-4">
+         <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+            <div class="mb-4">
+               <h4 class="text-lg font-semibold text-gray-800">Publications:-  </h4>
+            </div>
+            <div>
+               <div class="mt-4">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-2">IEEE Region 10 International Conference TENCON</h3>
+                  <!-- <h3 class="text-lg font-semibold text-gray-800 mb-2"></h3> -->
+                  <p class="text-sm text-gray-500 mb-1">Personalised Food Classifier and Nutrition Interpreter Multimedia Tool Using Deep Learning</p>
+                  <a href ="https://www.shutterstock.com/g/Nihar+Muniraju" target="_blank" class="text-blue-600 hover:underline block mb-2">Link: IEEE</a>
+                  <div class="mt-4">
+                     <h4 class="text-lg font-semibold text-gray-800 mb-2">My Photography Links:-</h4>
+                     <a href="https://www.shutterstock.com/g/Nihar+Muniraju" target="_blank" class="text-blue-600 hover:underline block mb-2">Shutterstock Portfolio</a>
+                     <a href="https://stock.adobe.com/contributor/210800054/Nihar?asset_id=488018025" target="_blank" class="text-blue-600 hover:underline block">Adobe Stock Portfolio</a>
+                  </div>
+                  <div class="mt-4">
+                     <h4 class="text-lg font-semibold text-gray-800 mb-2">Check out my other Blogposts:-</h4>
+                     <a href="https://medium.com/@niharmuniraju4" target="_blank" class="text-blue-600 hover:underline block mb-2">Medium</a>
+                  </div>
+               </div>
+      </section>
+      </div>
+      <!-- Smooth Scroll Script -->
+      <script>
+         document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+               e.preventDefault();
+               document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+               });
+            });
+         });
+         const toggle = document.querySelector('.menu-toggle');
+           const navLinks = document.querySelector('.navbar ul');
+         
+           toggle.addEventListener('click', () => {
+               navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+           });
+      </script>
+      <!-- Footer Section -->
+      <footer class="bg-gray-800 text-gray-200 py-4">
+      <div class="max-w-4xl mx-auto text-center">
+      <p class="text-sm">&copy; 2024 Nihar Muniraju. All Rights Reserved.</p>
+      </div>
+      </div>
+      </footer>
+   </body>
+</html>

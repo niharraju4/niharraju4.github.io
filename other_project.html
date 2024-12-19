@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nihar M - Projects</title>
+      <!-- Foundation CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+      <style>
+         body {
+         margin: 0;
+      
+         font-family: "Arial", sans-serif;
+         padding-top: 60px; /* Adjust this value based on your navbar height */
+         }
+         .brutalist-card {
+         width: 1000px;
+         border: 4px solid #000;
+         background-color: #fff;
+         padding: 1.5rem;
+         box-shadow: 10px 10px 0 #000;
+         font-family: "Arial", sans-serif;
+         margin-left: -200;    /* Pushes the card to the right */
+         margin-right: auto;  /* Optional, ensures no right margin*/
+         }
+         .brutalist-card__header {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+         margin-bottom: 1rem;
+         border-bottom: 2px solid #000;
+         padding-bottom: 1rem;
+         }
+         .brutalist-card__icon {
+         flex-shrink: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: #000;
+         padding: 0.5rem;
+         }
+         .brutalist-card__icon svg {
+         height: 1.5rem;
+         width: 1.5rem;
+         fill: #fff;
+         }
+         .brutalist-card__alert {
+         font-weight: 900;
+         color: #000;
+         font-size: 1.5rem;
+         text-transform: uppercase;
+         }
+         .brutalist-card__message {
+         margin-top: 1rem;
+         color: #000;
+         font-size: 0.9rem;
+         line-height: 1.4;
+         border-bottom: 2px solid #000;
+         padding-bottom: 1rem;
+         font-weight: 600;
+         }
+         .brutalist-card__actions {
+         margin-top: 1rem;
+         display: flex;
+         justify-content: flex-end; /* Align buttons to the right */
+         gap: 0.5rem;
+         }
+         .brutalist-card__button {
+         display: block;
+         width: 21%;
+         padding: 1.0rem;
+         text-align: center;
+         font-size: 1rem;
+         font-weight: 700;
+         text-transform: uppercase;
+         border: 3px solid #000;
+         background-color: #fff;
+         color: #000;
+         position: relative;
+         transition: all 0.2s ease;
+         box-shadow: 5px 5px 0 #000;
+         overflow: hidden;
+         text-decoration: none;
+         margin-bottom: 1rem;
+         }
+         .brutalist-card__button--read {
+         background-color: #000;
+         color: #fff;
+         }
+         .brutalist-card__button::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(
+         120deg,
+         transparent,
+         rgba(255, 255, 255, 0.3),
+         transparent
+         );
+         transition: all 0.6s;
+         }
+         .brutalist-card__button:hover::before {
+         left: 100%;
+         }
+         .brutalist-card__button:hover {
+         transform: translate(-2px, -2px);
+         box-shadow: 7px 7px 0 #000;
+         }
+         .brutalist-card__button--mark:hover {
+         background-color: #296fbb;
+         border-color: #296fbb;
+         color: #fff;
+         box-shadow: 7px 7px 0 #004280;
+         }
+         .brutalist-card__button--read:hover {
+         background-color: #ff0000;
+         border-color: #ff0000;
+         color: #fff;
+         box-shadow: 7px 7px 0 #800000;
+         }
+         .brutalist-card__button:active {
+         transform: translate(5px, 5px);
+         box-shadow: none;
+         }
+      </style>
+   </head>
+   <body class="bg-white text-black">
+      <!-- Navigation -->
+      <nav class="fixed top-0 left-0 right-0 bg-black text-white z-50">
+         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold">Nihar M</div>
+            <div class="space-x-4">
+               <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
+               <a href="projects.html" class="text-gray-300 hover:text-white transition">Projects</a>
+               <a href="https://www.linkedin.com/in/nihar-m" class="text-gray-300 hover:text-white transition">LinkedIn</a>
+            </div>
+         </div>
+      </nav>
+      <!-- Main Content -->
+      <div class="content">
+         <div class="grid-container py-10">
+            
+            <div class="brutalist-card">
+               <div class="brutalist-card__header">
+                  <div class="brutalist-card__alert">Datascience capstone Project</div>
+               </div>
+               <div class="brutalist-card__message">
+         Fill
+               </div>
+               <div class="brutalist-card__actions">
+                  <a class="brutalist-card__button brutalist-card__button--mark"  href="#"
+                  >PDF</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/DataScienceCapstone" >github</a>
+                
+               </div>
+            </div>
+            </br>
+            <div class="brutalist-card">
+               <div class="brutalist-card__header">
+                  <div class="brutalist-card__alert">New York Uber</div>
+               </div>
+               <div class="brutalist-card__message">
+                  content
+               </div>
+               <div class="brutalist-card__actions">
+                  <a class="brutalist-card__button brutalist-card__button--mark" href="#"
+                     >PDF</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Natural_language_processing/blob/main/stop_words.ipynb">github</a
+                     >
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Uber_New_York/blob/main/Uber_Newyork_DataAnalysis.ipynb">Jupyter</a>
+               </div>
+            </div>
+            </br>
+            <div class="brutalist-card">
+               <div class="brutalist-card__header">
+                  <div class="brutalist-card__alert">Pancard</div>
+               </div>
+               <div class="brutalist-card__message">
+                  Content
+               </div>
+               <div class="brutalist-card__actions">
+                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Pan-card">github</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Pan-card/blob/main/Pancardtampering.ipynb">Jupyter</a>
+               </div>
+            </div>
+            </br>
+            <div class="brutalist-card">
+               <div class="brutalist-card__header">
+                  <div class="brutalist-card__alert">Bitcoin</div>
+               </div>
+               <div class="brutalist-card__message">
+                  Stemming is the process of reducing a word to its root form or base form, often by removing suffixes and prefixes. The goal of stemming is to group words with the same meaning but different forms together, so they can be analyzed as a single item. This technique is widely used in natural language processing (NLP) and information retrieval systems, such as search engines, to improve the consistency and efficiency of data processing.
+               </div>
+               <div class="brutalist-card__actions">
+                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Bitcoin">github</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Bitcoin/blob/main/Bitcoin_final.ipynb">Jupyter</a>
+               </div>
+            </div>
+            </br>
+            <div class="brutalist-card">
+               <div class="brutalist-card__header">
+                  <div class="brutalist-card__alert">loan data Experimentaion</div>
+               </div>
+               <div class="brutalist-card__message">
+                  Content
+               </div>
+               <div class="brutalist-card__actions">
+                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Uber_New_York">github</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/loan_data_expirementation/blob/main/Loan_Data_analysis.ipynb">Jupyter</a>
+               </div>
+            </div>
+            </br>
+            <div class="brutalist-card">
+               <div class="brutalist-card__header">
+                  <div class="brutalist-card__alert">Amazon Analysis</div>
+               </div>
+               <div class="brutalist-card__message">
+                  Content
+               </div>
+               <div class="brutalist-card__actions">
+                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/amazon_analysis">github</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/amazon_analysis/blob/main/amazon_analysis.ipynb">Jupyter</a>
+               </div>
+            </div>
+            </br>
+            <div class="brutalist-card">
+               <div class="brutalist-card__header">
+                  <div class="brutalist-card__alert">Data cleaning with Pandas</div>
+               </div>
+               <div class="brutalist-card__message">
+                  Content 
+               </div>
+               <div class="brutalist-card__actions">
+                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
+                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Data_Cleaning-Pandas">github</a>
+                  <!-- <a class="brutalist-card__button brutalist-card__button--read" href="#">Jupyter</a> -->
+               </div>
+            </div>
+            </br>
+          
+          
+            
+           
+           
+         </div>
+      </div>
+      <!-- Foundation JS -->
+      <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
+      <footer class="bg-gray-800 text-gray-200 py-4">
+         <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
+            <!-- <p class="text-sm">Designed with ❤️ using Tailwind CSS</p> -->
+            <div class="flex justify-center space-x-4 mt-2">
+               <!-- <a href="https://github.com/niharraju4" target="_blank" class="text-gray-400 hover:text-white">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6V20c-3.2.7-3.8-1.5-3.8-1.5-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1 3 1 .1-.6.4-1 .7-1.2-2.6-.3-5.4-1.3-5.4-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.2 1 .9-.2 1.8-.3 2.8-.3s1.9.1 2.8.3c2.2-1.3 3.2-1 3.2-1 .6 1.6.2 2.9.1 3.2.7.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.4 5.7.4.3.7.9.7 1.8v2.6c0 .3.2.7.8.6A12 12 0 0 0 12 0z"/>
+                  </svg>
+                  </a>
+                  -->
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
