@@ -9,64 +9,96 @@
       <style>
          body {
             background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-            background: linear-gradient(90deg, #f0ffcf, #fcfcd2, #fff9d7, #fff7df, #fff6e7, #fff7ef, #fff8f6, #fffafa); /* made at https://learnui.design/tools/gradient-generator.html */
+            background: linear-gradient(90deg, #f0ffcf, #fcfcd2, #fff9d7, #fff7df, #fff6e7, #fff7ef, #fff8f6, #fffafa);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
             font-family: 'Open Sans Condensed', sans-serif;
          }
-         .menu {
-            padding: 19px 20px;
-            text-align: right;
-            background: #000000;
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
          }
-         .menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+     
+         .navbar {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             background-color: #000;
+             padding: 10px 20px;
          }
-         .menu li {
-            display: inline-block;
-            margin: 0 15px;
+     
+         .navbar .logo {
+             color: #fff;
+             font-size: 1.5rem;
+             font-weight: bold;
+             text-decoration: none;
          }
-         .menu a {
-            font-size: 22px;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #fff;
-            position: relative;
-            padding: 4px 0;
+     
+         .navbar ul {
+             display: flex;
+             list-style: none;
          }
-         .menu a::before {
-            content: "";
-            width: 100%;
-            height: 4px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background: #fff;
-            transition: 0.5s transform ease;
-            transform: scale3d(0, 1, 1);
-            transform-origin: 0 50%;
+     
+         .navbar ul li {
+             margin: 0 15px;
          }
-         .menu a:hover::before {
-            transform: scale3d(1, 1, 1);
+     
+         .navbar ul li a {
+             color: #fff;
+             text-decoration: none;
+             font-size: 1rem;
+             transition: color 0.3s ease;
          }
-         .menu a:hover {
-            color: #E91E63;
+     
+         .navbar ul li a:hover {
+             color: #1abc9c;
          }
-         .menu a::before {
-            background: #E91E63;
+     
+         .menu-toggle {
+             display: none;
+             color: #fff;
+             font-size: 1.5rem;
+             cursor: pointer;
+         }
+     
+         @media (max-width: 768px) {
+             .navbar ul {
+                 display: none;
+                 flex-direction: column;
+                 width: 100%;
+                 background-color: #000;
+                 position: absolute;
+                 top: 60px;
+                 left: 0;
+                 z-index: 1000;
+             }
+     
+             .navbar ul.active {
+                 display: flex;
+             }
+     
+             .navbar ul li {
+                 text-align: center;
+                 margin: 10px 0;
+             }
+     
+             .menu-toggle {
+                 display: block;
+             }
          }
       </style>
    </head>
    <body>
       <!-- Navigation Menu -->
-      <nav class="menu">
+      <nav class="navbar">
+         <a href="#" class="logo">NIHAR</a>
+         <span class="menu-toggle">&#9776;</span>
          <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="#">CV</a></li>
             <li><a href="#">Contact</a></li>
          </ul>
       </nav>
@@ -74,65 +106,50 @@
       <div class="content bg-gray-100 py-10">
          <div class="container mx-auto px-4 space-y-8">
             <!-- Card 1 -->
-            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+            <a href="/ml-project" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Machine Learning [ML]</h2>
                   <p class="text-gray-600 leading-relaxed">
                      Machine Learning is a subset of artificial intelligence that focuses on designing algorithms capable of learning and making decisions from data. It enables systems to recognize patterns, predict outcomes, and improve performance over time without explicit programming. From recommendation systems to fraud detection, ML is widely applied across industries to solve complex problems efficiently. Key techniques include supervised learning, unsupervised learning, and reinforcement learning.
                   </p>
-                  <div class="mt-4 flex justify-end space-x-4">
-                     <a href="/ml-project" class="btn-primary">Projects</a>
-                  </div>
                </div>
-            </div>
+            </a>
             <!-- Card 2 -->
-            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+            <a href="/nlp-project" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Natural Language Processing [NLP]</h2>
                   <p class="text-gray-600 leading-relaxed">
                      Natural Language Processing bridges the gap between human language and computer understanding, enabling machines to interpret, process, and generate human-like text. It powers applications like sentiment analysis, machine translation, chatbots, and virtual assistants. NLP combines computational linguistics with machine learning to analyze text and speech, making communication between humans and machines more natural and seamless. Advanced NLP techniques include tokenization, named entity recognition, and transformers for contextual understanding.
                   </p>
-                  <div class="mt-4 flex justify-end space-x-4">
-                     <a href="/nlp-project.html" class="btn-primary">Projects</a>
-                  </div>
                </div>
-            </div>
+            </a>
             <!-- Card 3 -->
-            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+            <a href="/dl_project1" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Deep Learning [DL]</h2>
                   <p class="text-gray-600 leading-relaxed">
                      Deep Learning is an advanced subset of machine learning that mimics the workings of the human brain using artificial neural networks with multiple layers. It is highly effective in processing vast amounts of structured and unstructured data, making breakthroughs in tasks like image recognition, speech processing, and natural language understanding. DL algorithms automatically discover intricate patterns, driving innovation in fields such as autonomous vehicles, healthcare diagnostics, and personalization systems.
                   </p>
-                  <div class="mt-4 flex justify-end space-x-4">
-                     <a href="/dl_project1.html" class="btn-primary">Projects</a>
-                  </div>
                </div>
-            </div>
+            </a>
             <!-- Card 4 -->
-            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+            <a href="/llm-project.html" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Large Language Models [LLMs]</h2>
                   <p class="text-gray-600 leading-relaxed">
                      Large Language Models are a revolutionary advancement in AI, trained on extensive datasets to generate human-like text, understand context, and perform a variety of language-related tasks. They power sophisticated applications such as conversational AI, text summarization, and content generation. Models like GPT-4 and ChatGPT utilize billions of parameters to offer nuanced and context-aware interactions, reshaping the way we approach AI-driven solutions.
                   </p>
-                  <div class="mt-4 flex justify-end space-x-4">
-                     <a href="/llm-project.html" class="btn-primary">Projects</a>
-                  </div>
                </div>
-            </div>
+            </a>
             <!-- Card 5 -->
-            <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+            <a href="/other_project.html" class="card bg-white rounded-lg shadow-lg overflow-hidden block">
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Other Datascience Projects</h2>
                   <p class="text-gray-600 leading-relaxed">
                      This category encompasses additional technologies and concepts that complement AI, such as cloud computing, data engineering, and MLOps. These tools and frameworks help scale AI models, manage data pipelines, and deploy solutions in production environments. The integration of AI with disciplines like IoT, robotics, and edge computing further expands its capabilities, enabling real-time and efficient problem-solving across diverse domains.
                   </p>
-                  <div class="mt-4 flex justify-end space-x-4">
-                     <a href="/other-project.html" class="btn-primary">Projects</a>
-                  </div>
                </div>
-            </div>
+            </a>
          </div>
       </div>
       <footer class="bg-gray-800 text-gray-200 py-4">
