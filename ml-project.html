@@ -8,13 +8,91 @@
       <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
       <style>
+         body {
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+            background: linear-gradient(90deg, #f0ffcf, #fcfcd2, #fff9d7, #fff7df, #fff6e7, #fff7ef, #fff8f6, #fffafa);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Open Sans Condensed', sans-serif;
+             padding-top: 60px; 
+         }
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+     
+         .navbar {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             background-color: #000;
+             padding: 10px 20px;
+         }
+     
+         .navbar .logo {
+             color: #fff;
+             font-size: 1.5rem;
+             font-weight: bold;
+             text-decoration: none;
+         }
+     
+         .navbar ul {
+             display: flex;
+             list-style: none;
+         }
+     
+         .navbar ul li {
+             margin: 0 15px;
+         }
+     
+         .navbar ul li a {
+             color: #fff;
+             text-decoration: none;
+             font-size: 1rem;
+             transition: color 0.3s ease;
+         }
+     
+         .navbar ul li a:hover {
+             color: #1abc9c;
+         }
+     
+         .menu-toggle {
+             display: none;
+             color: #fff;
+             font-size: 1.5rem;
+             cursor: pointer;
+         }
+     
+         @media (max-width: 768px) {
+             .navbar ul {
+                 display: none;
+                 flex-direction: column;
+                 width: 100%;
+                 background-color: #000;
+                 position: absolute;
+                 top: 60px;
+                 left: 0;
+                 z-index: 1000;
+             }
+     
+             .navbar ul.active {
+                 display: flex;
+             }
+     
+             .navbar ul li {
+                 text-align: center;
+                 margin: 10px 0;
+             }
+     
+             .menu-toggle {
+                 display: block;
+             }
+         }
+     
 
-body {
-    margin: 0;
-    /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
-    font-family: "Arial", sans-serif;
-    padding-top: 60px; /* Adjust this value based on your navbar height */
-}
+
          .brutalist-card {
          width: 1000px;
          border: 4px solid #000;
