@@ -101,7 +101,12 @@
          font-family: "Arial", sans-serif;
          margin-left: -200; /* Pushes the card to the right */
           margin-right: auto;  /* Optional, ensures no right margin */
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
          }
+         .brutalist-card:hover {
+            transform: translateY(-10px); /* Lift up effect */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+        }
          .brutalist-card__header {
          display: flex;
          align-items: center;
