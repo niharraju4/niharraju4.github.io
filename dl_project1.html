@@ -9,7 +9,7 @@
       <style>
          body {
          /* background-color: #defcf9 !important; */
-         color: #cbb6b6;
+         background-color: #defcf9 !important;
          font-family: 'Open Sans Condensed', sans-serif;
          }
          * {
@@ -83,7 +83,7 @@
          background-color: rgba(0, 0, 0, 0.1);
          color: #000;
          margin-bottom: 10px; /* Reduce margin between cards */
-         border-radius: 5px;
+         border-radius: 10px;
          }
          .card:hover {
          transform: scale(1.05);
@@ -113,7 +113,7 @@
          cursor: pointer;
          font-weight: 500;
          border: 1px solid transparent;
-         border-radius: 1px;
+         border-radius: 5px;
          height: 36px;
          line-height: 34px;
          font-size: 14px;
@@ -152,15 +152,15 @@
          </ul>
       </nav>
       <!-- Main Content -->
-      <div class="content bg-gray-100 py-10">
+      <div class="content  py-10">
          <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
             <div class="card bg-white shadow-lg overflow-hidden block">
                 <div class="p-6">
                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Pytorch</h2>
                    <p class="text-gray-600 leading-relaxed">
-                     Definition: PyTorch is an open-source machine learning framework based on Python, primarily used for deep learning applications.
-What it does: Provides tools for building and training neural networks, enabling dynamic computation graphs for flexibility.
-Application: Widely used in computer vision, natural language processing, and reinforcement learning.
+                     Definition: PyTorch is an open-source machine learning framework based on Python, primarily used for deep learning applications.</br>
+What it does: Provides tools for building and training neural networks, enabling dynamic computation graphs for flexibility.</br>
+Application: Widely used in computer vision, natural language processing, and reinforcement learning.</br>
 Advantage: Offers easy debugging, GPU acceleration, and integration with Python libraries.
 
                    </p>
@@ -178,9 +178,9 @@ Advantage: Offers easy debugging, GPU acceleration, and integration with Python 
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">OpenCV</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: OpenCV (Open Source Computer Vision Library) is a library designed for real-time computer vision and image processing tasks.
-                     What it does: Processes images and videos for applications like object detection, face recognition, and motion tracking.
-                     Application: Used in robotics, surveillance systems, and augmented reality projects.
+                     Definition: OpenCV (Open Source Computer Vision Library) is a library designed for real-time computer vision and image processing tasks.</br>
+                     What it does: Processes images and videos for applications like object detection, face recognition, and motion tracking.</br>
+                     Application: Used in robotics, surveillance systems, and augmented reality projects.</br>
                      Advantage: Provides a rich set of functions for image analysis, with support for multiple programming languages.
                      
                   </p>
@@ -196,9 +196,9 @@ Advantage: Offers easy debugging, GPU acceleration, and integration with Python 
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Neural Networks</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Neural Networks are computing systems inspired by the structure and functioning of the human brain, designed to recognize patterns in data.
-What they do: Process data through layers of interconnected nodes (neurons) to identify relationships and make predictions.
-Application: Used in image recognition, natural language processing, autonomous systems, and more.
+                     Definition: Neural Networks are computing systems inspired by the structure and functioning of the human brain, designed to recognize patterns in data.</br>
+What they do: Process data through layers of interconnected nodes (neurons) to identify relationships and make predictions.</br>
+Application: Used in image recognition, natural language processing, autonomous systems, and more.</br>
 Advantage: Capable of solving complex tasks by learning from large datasets and generalizing across scenarios.
 
                   </p>
@@ -214,9 +214,9 @@ Advantage: Capable of solving complex tasks by learning from large datasets and 
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Tensorflow</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: TensorFlow is an open-source machine learning and deep learning framework developed by Google.
-                     What it does: Facilitates the development, training, and deployment of machine learning models with scalable computational capabilities.
-                     Application: Used in tasks like image classification, speech recognition, and text generation.
+                     Definition: TensorFlow is an open-source machine learning and deep learning framework developed by Google.</br>
+                     What it does: Facilitates the development, training, and deployment of machine learning models with scalable computational capabilities.</br>
+                     Application: Used in tasks like image classification, speech recognition, and text generation.</br>
                      Advantage: Supports deployment on a variety of platforms, including mobile, and offers a vast ecosystem of tools and pre-trained models.
                      
                   </p>
@@ -229,6 +229,16 @@ Advantage: Capable of solving complex tasks by learning from large datasets and 
             </div>
          </div>
       </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+           const toggle = document.querySelector(".menu-toggle");
+           const navMenu = document.querySelector(".navbar ul");
+       
+           toggle.addEventListener("click", function () {
+             navMenu.classList.toggle("active");
+           });
+         });
+       </script>
       <footer class="bg-black-800 text-gray-200 py-4">
          <div class="max-w-4xl mx-auto text-center">
             <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
