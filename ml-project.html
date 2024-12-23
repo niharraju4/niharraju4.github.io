@@ -3,444 +3,368 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Nihar M - Projects</title>
-      <!-- Foundation CSS -->
+      <title>Portfolio</title>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
       <style>
          body {
-            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-            background: linear-gradient(90deg, #f0ffcf, #fcfcd2, #fff9d7, #fff7df, #fff6e7, #fff7ef, #fff8f6, #fffafa);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            font-family: 'Open Sans Condensed', sans-serif; 
+         /* background-color: #defcf9 !important; */
+         color: #cbb6b6;
+         font-family: 'Open Sans Condensed', sans-serif;
          }
          * {
-             margin: 0;
-             padding: 0;
-             box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
          }
-     
          .navbar {
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-             background-color: #000;
-             padding: 10px 20px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #000;
+         padding: 10px 20px;
+         position: fixed; /* Make the navbar fixed */
+         width: 100%; /* Ensure it spans the full width */
+         top: 0; /* Stick to the top */
+         z-index: 1000; /* Ensure it stays on top of other elements */
          }
-     
          .navbar .logo {
-             color: #fff;
-             font-size: 1.5rem;
-             font-weight: bold;
-             text-decoration: none;
-         }
-     
-         .navbar ul {
-             display: flex;
-             list-style: none;
-         }
-     
-         .navbar ul li {
-             margin: 0 15px;
-         }
-     
-         .navbar ul li a {
-             color: #fff;
-             text-decoration: none;
-             font-size: 1rem;
-             transition: color 0.3s ease;
-         }
-     
-         .navbar ul li a:hover {
-             color: #1abc9c;
-         }
-     
-         .menu-toggle {
-             display: none;
-             color: #fff;
-             font-size: 1.5rem;
-             cursor: pointer;
-         }
-     
-         @media (max-width: 768px) {
-             .navbar ul {
-                 display: none;
-                 flex-direction: column;
-                 width: 100%;
-                 background-color: #000;
-                 position: absolute;
-                 top: 60px;
-                 left: 0;
-                 z-index: 1000;
-             }
-     
-             .navbar ul.active {
-                 display: flex;
-             }
-     
-             .navbar ul li {
-                 text-align: center;
-                 margin: 10px 0;
-             }
-     
-             .menu-toggle {
-                 display: block;
-             }
-         }
-     
-
-
-         .brutalist-card {
-         width: 1000px;
-         border: 4px solid #000;
-         background-color: #fff;
-         padding: 1.5rem;
-         font-family: "Arial", sans-serif;
-         margin-left: -200; /* Pushes the card to the right */
-          margin-right: auto;  /* Optional, ensures no right margin */
-            transition: transform 0.6s ease, box-shadow 0.6s ease;
-         }
-         .brutalist-card:hover {
-            transform: translateY(-10px); /* Lift up effect */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-        }
-         .brutalist-card__header {
-         display: flex;
-         align-items: center;
-         gap: 1rem;
-         margin-bottom: 1rem;
-         border-bottom: 2px solid #000;
-         padding-bottom: 1rem;
-         }
-         .brutalist-card__icon {
-         flex-shrink: 0;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         background-color: #000;
-         padding: 0.5rem;
-         }
-         .brutalist-card__icon svg {
-         height: 1.5rem;
-         width: 1.5rem;
-         fill: #fff;
-         }
-         .brutalist-card__alert {
-         font-weight: 900;
-         color: #000;
+         color: #fff;
          font-size: 1.5rem;
-         text-transform: uppercase;
-         }
-         .brutalist-card__message {
-         margin-top: 1rem;
-         color: #000;
-         font-size: 0.9rem;
-         line-height: 1.4;
-         border-bottom: 2px solid #000;
-         padding-bottom: 1rem;
-         font-weight: 600;
-         }
-         .brutalist-card__actions {
-         margin-top: 1rem;
-         display: flex;
-         justify-content: flex-end; /* Align buttons to the right */
-         gap: 0.5rem;
-         }
-         .brutalist-card__button {
-         display: block;
-         width: 21%;
-         padding: 1.0rem;
-         text-align: center;
-         font-size: 1rem;
-         font-weight: 700;
-         text-transform: uppercase;
-         border: 3px solid #000;
-         background-color: #fff;
-         color: #000;
-         position: relative;
-         transition: all 0.2s ease;
-         box-shadow: 5px 5px 0 #000;
-         overflow: hidden;
+         font-weight: bold;
          text-decoration: none;
-         margin-bottom: 1rem;
          }
-         .brutalist-card__button--read {
+         .navbar ul {
+         display: flex;
+         list-style: none;
+         }
+         .navbar ul li {
+         margin: 0 15px;
+         }
+         .navbar ul li a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 1rem;
+         transition: color 0.3s ease;
+         }
+         .navbar ul li a:hover {
+         color: #1abc9c;
+         }
+         .menu-toggle {
+         display: none;
+         color: #fff;
+         font-size: 1.5rem;
+         cursor: pointer;
+         }
+         @media (max-width: 768px) {
+         .navbar ul {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         background-color: #000;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         z-index: 1000;
+         }
+         .navbar ul.active {
+         display: flex;
+         }
+         .navbar ul li {
+         text-align: center;
+         margin: 10px 0;
+         }
+         .menu-toggle {
+         display: block;
+         }
+         }
+         .card {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         background-color: rgba(0, 0, 0, 0.1);
+         color: #000;
+         margin-bottom: 10px; /* Reduce margin between cards */
+         border-radius: 5px;
+         }
+         .card:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+         }
+         .card h2 {
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         footer {
          background-color: #000;
          color: #fff;
+         position: fixed; /* Make the footer fixed */
+         bottom: 0; /* Stick to the bottom */
+         width: 100%; /* Ensure it spans the full width */
          }
-         .brutalist-card__button::before {
-         content: "";
-         position: absolute;
-         top: 0;
-         left: -100%;
-         width: 100%;
-         height: 100%;
-         background: linear-gradient(
-         120deg,
-         transparent,
-         rgba(255, 255, 255, 0.3),
-         transparent
-         );
-         transition: all 0.6s;
+         .button-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 3px;
+         justify-content: center;
+         padding: 2px;
+        
          }
-         .brutalist-card__button:hover::before {
-         left: 100%;
+         .custom-button {
+         display: inline-block;
+         outline: none;
+         cursor: pointer;
+         font-weight: 500;
+         border: 1px solid transparent;
+         border-radius: 1px;
+         height: 36px;
+         line-height: 34px;
+         font-size: 14px;
+         color: #ffffff;
+         background-color: #007c89;
+         transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+         padding: 0 18px;
+         flex: 1 1 calc(20% - 10px);
+         text-align: center;
+         padding: 0 12px; /* Adjust for proper spacing */
+         white-space: nowrap; /* Prevent text from wrapping */
          }
-         .brutalist-card__button:hover {
-         transform: translate(-2px, -2px);
-         box-shadow: 7px 7px 0 #000;
+         .custom-button:hover {
+         color: #ffffff;
+         background-color: #006570;
          }
-         .brutalist-card__button--mark:hover {
-         background-color: #296fbb;
-         border-color: #296fbb;
-         color: #fff;
-         box-shadow: 7px 7px 0 #004280;
+         .content {
+         display: flex;
+         justify-content: flex-end; /* Align cards to the right */
+         padding-right: 20px; /* Minimum gap to frame */
          }
-         .brutalist-card__button--read:hover {
-         background-color: #ff0000;
-         border-color: #ff0000;
-         color: #fff;
-         box-shadow: 7px 7px 0 #800000;
-         }
-         .brutalist-card__button:active {
-         transform: translate(5px, 5px);
-         box-shadow: none;
+         .container {
+         max-width: 800px; /* Adjust width to control the card section size */
          }
       </style>
    </head>
-   <body class="bg-white text-black">
-      <!-- Navigation -->
+  <body class="bg-teal-100">
+
+      <!-- Navigation Menu -->
       <nav class="navbar">
-         <a href="#" class="logo">NIHAR</a>
+         <a href="/index" class="logo">NIHAR</a>
          <span class="menu-toggle">&#9776;</span>
          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
+            <li><a href="/index">Home</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="#">Contact</a></li>
          </ul>
       </nav>
       <!-- Main Content -->
-      <div class="content">
-         <div class="grid-container py-10">
-            <!-- <h1 class="text-center text-4xl font-bold">PROJECTS</h1> -->
+      <div class="content bg-gray-100 py-10">
+         <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+                <div class="p-6">
+                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Linear Regression</h2>
+                   <p class="text-gray-600 leading-relaxed">
+                     Definition: Linear Regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables.
+What it does: It predicts outcomes by fitting a straight line to the data points, minimizing the error between actual and predicted values.
+Application: Commonly used in forecasting, risk assessment, and understanding relationships between variables.
+Limitation: Assumes a linear relationship, which may not hold in complex datasets.
 
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-               
-                  <div class="brutalist-card__alert">Linear Regression</div>
-               </div>
-               <div class="brutalist-card__message">
-                  Linear regression is a statistical method that is used to predict a continuous dependent variable(target variable) based on one or more independent variables(predictor variables). This technique assumes a linear relationship between the dependent and independent variables, which implies that the dependent variable changes proportionally with changes in the independent variables. In other words, linear regression is used to determine the extent to which one or more variables can predict the value of the dependent variable.
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">Mark as Read</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/linear_R" >github</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/california_housing.ipynb">Jupyter</a>
+                   </p>
+                   <div class="button-container">
+                      <a href="#" class="custom-button">Pdf</a>
+                      <a href="https://github.com/niharraju4/linear_R" class="custom-button">GitHub</a>
+                      <a href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/california_housing.ipynb" class="custom-button">Jupyter</a>
+                   </div>
+                </div>
+             </div>
+            <!-- Card 2 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Multiple Linear Regression</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Multiple Linear Regression models the relationship between one dependent variable and multiple independent variables.
+                     What it does: Fits a hyperplane to the data, allowing for prediction based on multiple factors simultaneously.
+                     Application: Used in economics, biology, and other fields for analyzing multidimensional data.
+                     Advantage: Provides a more comprehensive understanding of variable interactions compared to simple linear regression.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/multipleLR.ipynb" class="custom-button">Jupyter</a>
+                  </div>
                </div>
             </div>
-        </br>
-            <div class="brutalist-card">
-                <div class="brutalist-card__header">
-                  
-                   <div class="brutalist-card__alert">Multiple Linear Regression</div>
-                </div>
-                <div class="brutalist-card__message">
-                  Multiple linear regression attempts to model the relationship between two or more features and a response by fitting a linear equation to the observed data.
-                  Clearly, it is nothing but an extension of simple linear regression. Consider a dataset with p features(or independent variables) and one response(or dependent variable). 
-                                  </div>
-                <div class="brutalist-card__actions">
-                   <a class="brutalist-card__button brutalist-card__button--mark" href="#"
-                      >Mark as Read</a>
-                   <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/" >github</a
-                      >
-                   <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/multipleLR.ipynb">Jupyter</a>
-                </div>
-         </div>
-
-        </br>
-
-        <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                 
-                  <div class="brutalist-card__alert">Polynomial Linear Regression</div>
+            <!-- Card 3 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Polynomial Linear Regression</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Polynomial Regression extends Linear Regression by fitting a polynomial curve to the data instead of a straight line.
+                     What it does: Captures non-linear relationships between variables by including polynomial terms.
+                     Application: Used in scenarios like curve fitting, stock price modeling, and environmental data analysis.
+                     Limitation: Overfitting can occur if the polynomial degree is too high.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/poly.ipynb" class="custom-button">Jupyter</a>
+                  </div>
                </div>
-               <div class="brutalist-card__message">
-                  Polynomial Regression is a form of linear regression in which the relationship between the independent variable x and dependent variable y is modelled as an nth-degree polynomial. Polynomial regression fits a nonlinear relationship between the value of x and the corresponding conditional mean of y, denoted E(y | x).
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Navie baye’s</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Naive Bayes is a probabilistic algorithm based on Bayes' Theorem, assuming independence between predictors.
+                     What it does: Classifies data by calculating the probability of a class given the features.
+                     Application: Widely used in spam filtering, sentiment analysis, and document classification.
+                     Advantage: Efficient for large datasets but assumes feature independence, which may not always hold.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="/https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/7-Naive%20Baye's.pdf" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/naive.ipynb" class="custom-button">Jupyter</a>
+                  </div>
                </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">Mark as Read</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/" >github</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/poly.ipynb">Jupyter</a>
-               </div>             
-      </div>
-      
-   </br>
-
-   <div class="brutalist-card">
-          <div class="brutalist-card__header">
+            </div>
+            <!-- Card 4 -->
+         
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Random Forest</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Random Forest is an ensemble learning method that combines multiple decision trees to improve accuracy.
+                     What it does: Aggregates predictions from several trees to reduce overfitting and enhance generalization.
+                     Application: Used in classification, regression, and feature selection across various industries.
+                     Advantage: Handles missing data well and works effectively with large, complex datasets.
+                     
             
-             <div class="brutalist-card__alert">Navie baye’s:</div>
-          </div>
-          <div class="brutalist-card__message">
-             Polynomial Regression is a form of linear regression in which the relationship between the independent variable x and dependent variable y is modelled as an nth-degree polynomial. Polynomial regression fits a nonlinear relationship between the value of x and the corresponding conditional mean of y, denoted E(y | x).
-          </div>
-          <div class="brutalist-card__actions">
-             <a class="brutalist-card__button brutalist-card__button--mark" href="https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/7-Naive%20Baye's.pdf">PDF</a>
-             <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/" >github</a>
-             <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/naive.ipynb">Jupyter</a>
-          </div>             
- </div>
- 
-
-</br>
-
-<div class="brutalist-card">
-       <div class="brutalist-card__header">
-          
-          <div class="brutalist-card__alert">Random Forest</div>
-       </div>
-       <div class="brutalist-card__message">
-         The Random forest or Random Decision Forest is a supervised Machine learning algorithm used for classification, regression, and other tasks using decision trees. Random Forests are particularly well-suited for handling large and complex datasets, dealing with high-dimensional feature spaces, and providing insights into feature importance. This algorithm’s ability to maintain high predictive accuracy while minimizing overfitting makes it a popular choice across various domains, including finance, healthcare, and image analysis, among others.
-         Random Forest Classifier
-         The Random forest classifier creates a set of decision trees from a randomly selected subset of the training set. It is a set of decision trees (DT) from a randomly selected subset of the training set and then It collects the votes from different decision trees to decide the final prediction.
-         Random Forest Classifier
-         Additionally, the random forest classifier can handle both classification and regression tasks, and its ability to provide feature importance scores makes it a valuable tool for understanding the significance of different variables in the dataset.
-         
-       </div>
-       <div class="brutalist-card__actions">
-          <a class="brutalist-card__button brutalist-card__button--mark" href="https://github.com/niharraju4/Random_Forest-ML-/blob/main/RandomForest%20Regression.pdf">PDF</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Random_Forest-ML-" >github</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/poly.ipynb">Jupyter</a>
-       </div>             
-</div>
-
-</br>
-
-<div class="brutalist-card">
-       <div class="brutalist-card__header">
-       
-          <div class="brutalist-card__alert">Decision Tree</div>
-       </div>
-       <div class="brutalist-card__message">
-         A decision tree is a flowchart-like structure used to make decisions or predictions. It consists of nodes representing decisions or tests on attributes, branches representing the outcome of these decisions, and leaf nodes representing final outcomes or predictions. Each internal node corresponds to a test on an attribute, each branch corresponds to the result of the test, and each leaf node corresponds to a class label or a continuous value.
-       </div>
-       <div class="brutalist-card__actions">
-          <a class="brutalist-card__button brutalist-card__button--mark" href="#">pdf</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/tree/main/DecisionTree" >github</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="#">Jupyter</a>
-       </div>             
-</div>
-
-</br>
-
-<div class="brutalist-card">
-       <div class="brutalist-card__header">
-         
-          <div class="brutalist-card__alert">
-            Logistic regression 
+                  </p>
+                  <div class="button-container">
+                     <a href="https://github.com/niharraju4/Random_Forest-ML-/blob/main/RandomForest%20Regression.pdf" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Random_Forest-ML-/" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
             </div>
-       </div>
-       <div class="brutalist-card__message">
-         Logistic regression is a supervised machine learning algorithm used for classification tasks where the goal is to predict the probability that an instance belongs to a given class or not. Logistic regression is a statistical algorithm which analyze the relationship between two data factors.
-       </div>
-       <div class="brutalist-card__actions">
-          <a class="brutalist-card__button brutalist-card__button--mark" href="#">pdf</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Logestic_Regression" >github</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="#">Jupyter</a>
-       </div>             
-</div>
-</br>
-<div class="brutalist-card">
-       <div class="brutalist-card__header">
-        
-          <div class="brutalist-card__alert">Support Vector Machine (SVM)</div>
-       </div>
-       <div class="brutalist-card__message">
-         A Support Vector Machine (SVM) is a powerful machine learning algorithm widely used for both linear and nonlinear classification, as well as regression and outlier detection tasks. SVMs are highly adaptable, making them suitable for various applications such as text classification, image classification, spam detection, handwriting identification, gene expression analysis, face detection, and anomaly detection.
-       </div>
-       <div class="brutalist-card__actions">
-          <a class="brutalist-card__button brutalist-card__button--mark" href="https://github.com/niharraju4/Machine-learning/blob/main/SVM/svm.pdf">PDF</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/tree/main/SVM" >github</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="#">Jupyter</a>
-       </div>             
-</div>
-</br>
-<div class="brutalist-card">
-       <div class="brutalist-card__header">
-        
-          <div class="brutalist-card__alert">K-Nearest Neighbors (KNN) </div>
-       </div>
-       <div class="brutalist-card__message">
-         The K-Nearest Neighbors (KNN) algorithm is a supervised machine learning method employed to tackle classification and regression problems.  KNN is one of the most basic yet essential classification algorithms in machine learning. It belongs to the supervised learning domain and finds intense application in pattern recognition, data mining, and intrusion detection.
-       </div>
-       <div class="brutalist-card__actions">
-          <a class="brutalist-card__button brutalist-card__button--mark" href="#">pdf</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/" >github</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/poly.ipynb">Jupyter</a>
-       </div>             
-</div>
-</br>
-<div class="brutalist-card">
-       <div class="brutalist-card__header">
-          
-          <div class="brutalist-card__alert">Gradient Boosting </div>
-       </div>
-       <div class="brutalist-card__message">
-         Gradient Boosting is a popular boosting algorithm in machine learning used for classification and regression tasks. Boosting is one kind of ensemble Learning method which trains the model sequentially and each new model tries to correct the previous model. It combines several weak learners into strong learners.</div>
-       <div class="brutalist-card__actions">
-          <a class="brutalist-card__button brutalist-card__button--mark" href="#">pdf</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="#" >github</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="#">Jupyter</a>
-       </div>             
-</div>
-</br>
-<div class="brutalist-card">
-       <div class="brutalist-card__header">
-          
-          <div class="brutalist-card__alert">XGBoost</div>
-       </div>
-       <div class="brutalist-card__message">
-         XGBoost is an optimized distributed gradient boosting library designed for efficient and scalable training of machine learning models. It is an ensemble learning method that combines the predictions of multiple weak models to produce a stronger prediction. XGBoost stands for “Extreme Gradient Boosting” and it has become one of the most popular and widely used machine learning algorithms due to its ability to handle large datasets and its ability to achieve state-of-the-art performance in many machine learning tasks such as classification and regression.
-         One of the key features of XGBoost is its efficient handling of missing values, which allows it to handle real-world data with missing values without requiring significant pre-processing.
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Decision Tree</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Decision Tree is a supervised learning algorithm that splits data into branches based on decision rules.
+                     What it does: Breaks down complex decisions into simpler structures using a tree-like model.
+                     Application: Common in medical diagnoses, credit scoring, and business decision-making.
+                     Limitation: Prone to overfitting, which can reduce generalizability.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/tree/main/DecisionTree" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4"> Logistic regression </h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Logistic Regression is used for binary classification, predicting the probability of an event occurring.
+                     What it does: Fits a logistic function to the data, outputting probabilities instead of direct values.
+                     Application: Widely used in healthcare (disease prediction) and marketing (customer churn analysis).
+                     Advantage: Simple to implement and interpretable for binary classification tasks.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Logestic_Regression" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Support Vector Machine</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: SVM is a supervised learning algorithm for classification and regression tasks.
+                     What it does: Finds the optimal hyperplane that separates data points into distinct classes.
+                     Application: Effective for image recognition, text classification, and bioinformatics.
+                     Advantage: Works well with high-dimensional data and provides flexibility with kernel functions.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/SVM/svm.pdf" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/tree/main/SVM" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">K-Nearest Neighbors (KNN)</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     The K-Nearest Neighbors (KNN) algorithm is a supervised machine learning method employed to tackle classification and regression problems.  KNN is one of the most basic yet essential classification algorithms in machine learning. It belongs to the supervised learning domain and finds intense application in pattern recognition, data mining, and intrusion detection.
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Gradient Boosting</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Gradient Boosting is a popular boosting algorithm in machine learning used for classification and regression tasks. Boosting is one kind of ensemble Learning method which trains the model sequentially and each new model tries to correct the previous model. It combines several weak learners into strong learners
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+             <!-- Card 4 -->
+             <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">XGBoost</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     XGBoost is an optimized distributed gradient boosting library designed for efficient and scalable training of machine learning models. It is an ensemble learning method that combines the predictions of multiple weak models to produce a stronger prediction. XGBoost stands for “Extreme Gradient Boosting” and it has become one of the most popular and widely used machine learning algorithms due to its ability to handle large datasets and its ability to achieve state-of-the-art performance in many machine learning tasks such as classification and regression.
+                     One of the key features of XGBoost is its efficient handling of missing values, which allows it to handle real-world data with missing values without requiring significant pre-processing.
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">AdaBoost</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     AdaBoost is a boosting algorithm that also works on the principle of the stagewise addition method where multiple weak learners are used for getting strong learners. The value of the alpha parameter, in this case, will be indirectly proportional to the error of the weak learner, Unlike Gradient Boosting in XGBoost, the alpha parameter calculated is related to the errors of the weak learner, here the value of the alpha parameter will be indirectly proportional to the error of the weak learner.
          
-       </div>
-       <div class="brutalist-card__actions">
-          <a class="brutalist-card__button brutalist-card__button--mark" href="#">pdf</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Principal-component-analysis-PCA-/blob/main/pca/" >github</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Principal-component-analysis-PCA-/blob/main/pca/Principal%20Component%20Analysis%20(PCA)%20Implementation.ipynb">Jupyter</a>
-       </div>             
-</div>
-
-</br>
-
-<div class="brutalist-card">
-       <div class="brutalist-card__header">
-         
-          <div class="brutalist-card__alert">AdaBoost:</div>
-       </div>
-       <div class="brutalist-card__message">
-         AdaBoost is a boosting algorithm that also works on the principle of the stagewise addition method where multiple weak learners are used for getting strong learners. The value of the alpha parameter, in this case, will be indirectly proportional to the error of the weak learner, Unlike Gradient Boosting in XGBoost, the alpha parameter calculated is related to the errors of the weak learner, here the value of the alpha parameter will be indirectly proportional to the error of the weak learner.
-       </div>
-       <div class="brutalist-card__actions">
-          <a class="brutalist-card__button brutalist-card__button--mark" href="https://github.com/niharraju4/AdaBoost/blob/main/11.1-%20Adaboost%20MAth%20intuition.pdf">PDF</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/AdaBoost" >github</a>
-          <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/AdaBoost/blob/main/adaboostregression.ipynb">Jupyter</a>
-       </div>             
-</div>
-      
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">Github</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Card 5 -->
+        
       </div>
-      </div>
-      <!-- Foundation JS -->
-      <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
-   
-      <footer class="bg-gray-800 text-gray-200 py-4">
+      <footer class="bg-black-800 text-gray-200 py-4">
          <div class="max-w-4xl mx-auto text-center">
             <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
-         
-            </div>
          </div>
       </footer>
    </body>
