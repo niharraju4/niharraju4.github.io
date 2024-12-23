@@ -8,8 +8,8 @@
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
       <style>
          body {
-         /* background-color: #defcf9 !important; */
-         color: #cbb6b6;
+       
+         background-color: #defcf9 !important;
          font-family: 'Open Sans Condensed', sans-serif;
          }
          * {
@@ -149,18 +149,19 @@
          <ul>
             <li><a href="/index">Home</a></li>
             <li><a href="/projects">Projects</a></li>
+            <li><a href="#">CV</a></li>
          </ul>
       </nav>
       <!-- Main Content -->
-      <div class="content bg-gray-100 py-10">
+      <div class="content  py-10">
          <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
             <div class="card bg-white shadow-lg overflow-hidden block">
                 <div class="p-6">
                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Webparse Summerization</h2>
                    <p class="text-gray-600 leading-relaxed">
-                     Definition: Webparse summarization extracts key information from web pages and converts it into concise summaries.
-                     What it does: Automatically analyzes web content, identifying essential details while discarding irrelevant data.
-                     Application: Used for creating digestible content for news aggregation, research, and knowledge discovery.
+                     Definition: Webparse summarization extracts key information from web pages and converts it into concise summaries.</br>
+                     What it does: Automatically analyzes web content, identifying essential details while discarding irrelevant data.</br>
+                     Application: Used for creating digestible content for news aggregation, research, and knowledge discovery.</br>
                      Advantage: Saves time by summarizing large volumes of information efficiently.
                      
                    </p>
@@ -176,9 +177,9 @@
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Data Ingestion</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Data ingestion is the process of importing and transferring data from various sources into a storage or processing system.
-                     What it does: Collects structured and unstructured data for further analysis or storage.
-                     Application: Widely used in ETL pipelines, data lakes, and real-time analytics platforms.
+                     Definition: Data ingestion is the process of importing and transferring data from various sources into a storage or processing system.</br>
+                     What it does: Collects structured and unstructured data for further analysis or storage.</br>
+                     Application: Widely used in ETL pipelines, data lakes, and real-time analytics platforms.</br>
                      Scalability: Supports batch and streaming ingestion for handling large-scale data.
                      
                   </p>
@@ -194,9 +195,9 @@
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Data Transformation</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Data transformation is the process of converting raw data into a usable format for analysis or storage.
-                     What it does: Applies operations like filtering, normalization, and aggregation to prepare data.
-                     Application: Essential in data preprocessing for machine learning and business intelligence workflows.
+                     Definition: Data transformation is the process of converting raw data into a usable format for analysis or storage.</br>
+                     What it does: Applies operations like filtering, normalization, and aggregation to prepare data. </br>
+                     Application: Essential in data preprocessing for machine learning and business intelligence workflows.</br>
                      Advantage: Ensures consistency, accuracy, and usability of data.
                      
                   </p>
@@ -212,9 +213,9 @@
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Embeddings</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Embeddings are numerical vector representations of data, capturing relationships and semantic meanings.
-What it does: Transforms text, images, or other data into high-dimensional vectors for machine learning.
-Application: Widely used in NLP tasks like semantic search, sentiment analysis, and recommendation systems.
+                     Definition: Embeddings are numerical vector representations of data, capturing relationships and semantic meanings.</br>
+What it does: Transforms text, images, or other data into high-dimensional vectors for machine learning.</br>
+Application: Widely used in NLP tasks like semantic search, sentiment analysis, and recommendation systems.</br>
 Advantage: Enables efficient similarity comparison and downstream task performance improvements.
 
                   </p>
@@ -231,9 +232,9 @@ Advantage: Enables efficient similarity comparison and downstream task performan
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Transformers-Fake News and Twitter Multiclass sentimental classification]</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Transformers are advanced machine learning architectures designed for sequence-to-sequence tasks, such as classification and translation.
-                     What it does: Analyze and classify text for detecting fake news or performing sentiment analysis with high accuracy.
-                     Application: Used in social media monitoring, misinformation detection, and opinion mining.
+                     Definition: Transformers are advanced machine learning architectures designed for sequence-to-sequence tasks, such as classification and translation.</br>
+                     What it does: Analyze and classify text for detecting fake news or performing sentiment analysis with high accuracy.</br>
+                     Application: Used in social media monitoring, misinformation detection, and opinion mining.</br>
                      Advantage: Handles large datasets effectively, leveraging attention mechanisms for contextual understanding.
                      
             
@@ -250,9 +251,9 @@ Advantage: Enables efficient similarity comparison and downstream task performan
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Large Language Compute</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Large Language Compute refers to processing tasks involving massive language models like GPT or BERT.
-What it does: Powers applications like chatbots, summarization, and creative content generation.
-Application: Used in advanced NLP tasks such as question answering, translation, and conversational AI.
+                     Definition: Large Language Compute refers to processing tasks involving massive language models like GPT or BERT.</br>
+What it does: Powers applications like chatbots, summarization, and creative content generation.</br>
+Application: Used in advanced NLP tasks such as question answering, translation, and conversational AI.</br>
 Advantage: Offers unparalleled language understanding and generation capabilities at scale.
 
                   </p>
@@ -272,6 +273,16 @@ Advantage: Offers unparalleled language understanding and generation capabilitie
          <!-- Card 5 -->
         
       </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+           const toggle = document.querySelector(".menu-toggle");
+           const navMenu = document.querySelector(".navbar ul");
+       
+           toggle.addEventListener("click", function () {
+             navMenu.classList.toggle("active");
+           });
+         });
+       </script>
       <footer class="bg-black-800 text-gray-200 py-4">
          <div class="max-w-4xl mx-auto text-center">
             <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
