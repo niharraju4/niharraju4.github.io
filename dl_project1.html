@@ -3,196 +3,235 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Nihar M - Projects</title>
-      <!-- Foundation CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+      <title>Portfolio</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
       <style>
          body {
+         /* background-color: #defcf9 !important; */
+         color: #cbb6b6;
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         * {
          margin: 0;
-      
-         font-family: "Arial", sans-serif;
-         padding-top: 60px; /* Adjust this value based on your navbar height */
+         padding: 0;
+         box-sizing: border-box;
          }
-         .brutalist-card {
-         width: 1000px;
-         border: 4px solid #000;
-         background-color: #fff;
-         padding: 1.5rem;
-         box-shadow: 10px 10px 0 #000;
-         font-family: "Arial", sans-serif;
-         margin-left: -200; /* Pushes the card to the right */
-         margin-right: auto;  /* Optional, ensures no right margin */
-         }
-         .brutalist-card__header {
+         .navbar {
          display: flex;
+         justify-content: space-between;
          align-items: center;
-         gap: 1rem;
-         margin-bottom: 1rem;
-         border-bottom: 2px solid #000;
-         padding-bottom: 1rem;
-         }
-         .brutalist-card__icon {
-         flex-shrink: 0;
-         display: flex;
-         align-items: center;
-         justify-content: center;
          background-color: #000;
-         padding: 0.5rem;
+         padding: 10px 20px;
+         position: fixed; /* Make the navbar fixed */
+         width: 100%; /* Ensure it spans the full width */
+         top: 0; /* Stick to the top */
+         z-index: 1000; /* Ensure it stays on top of other elements */
          }
-         .brutalist-card__icon svg {
-         height: 1.5rem;
-         width: 1.5rem;
-         fill: #fff;
-         }
-         .brutalist-card__alert {
-         font-weight: 900;
-         color: #000;
+         .navbar .logo {
+         color: #fff;
          font-size: 1.5rem;
-         text-transform: uppercase;
-         }
-         .brutalist-card__message {
-         margin-top: 1rem;
-         color: #000;
-         font-size: 0.9rem;
-         line-height: 1.4;
-         border-bottom: 2px solid #000;
-         padding-bottom: 1rem;
-         font-weight: 600;
-         }
-         .brutalist-card__actions {
-         margin-top: 1rem;
-         display: flex;
-         justify-content: flex-end; /* Align buttons to the right */
-         gap: 0.5rem;
-         }
-         .brutalist-card__button {
-         display: block;
-         width: 21%;
-         padding: 1.0rem;
-         text-align: center;
-         font-size: 1rem;
-         font-weight: 700;
-         text-transform: uppercase;
-         border: 3px solid #000;
-         background-color: #fff;
-         color: #000;
-         position: relative;
-         transition: all 0.2s ease;
-         box-shadow: 5px 5px 0 #000;
-         overflow: hidden;
+         font-weight: bold;
          text-decoration: none;
-         margin-bottom: 1rem;
          }
-         .brutalist-card__button--read {
+         .navbar ul {
+         display: flex;
+         list-style: none;
+         }
+         .navbar ul li {
+         margin: 0 15px;
+         }
+         .navbar ul li a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 1rem;
+         transition: color 0.3s ease;
+         }
+         .navbar ul li a:hover {
+         color: #1abc9c;
+         }
+         .menu-toggle {
+         display: none;
+         color: #fff;
+         font-size: 1.5rem;
+         cursor: pointer;
+         }
+         @media (max-width: 768px) {
+         .navbar ul {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         background-color: #000;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         z-index: 1000;
+         }
+         .navbar ul.active {
+         display: flex;
+         }
+         .navbar ul li {
+         text-align: center;
+         margin: 10px 0;
+         }
+         .menu-toggle {
+         display: block;
+         }
+         }
+         .card {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         background-color: rgba(0, 0, 0, 0.1);
+         color: #000;
+         margin-bottom: 10px; /* Reduce margin between cards */
+         border-radius: 5px;
+         }
+         .card:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+         }
+         .card h2 {
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         footer {
          background-color: #000;
          color: #fff;
+         position: fixed; /* Make the footer fixed */
+         bottom: 0; /* Stick to the bottom */
+         width: 100%; /* Ensure it spans the full width */
          }
-         .brutalist-card__button::before {
-         content: "";
-         position: absolute;
-         top: 0;
-         left: -100%;
-         width: 100%;
-         height: 100%;
-         background: linear-gradient(
-         120deg,
-         transparent,
-         rgba(255, 255, 255, 0.3),
-         transparent
-         );
-         transition: all 0.6s;
+         .button-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 3px;
+         justify-content: center;
+         padding: 2px;
+        
          }
-         .brutalist-card__button:hover::before {
-         left: 100%;
+         .custom-button {
+         display: inline-block;
+         outline: none;
+         cursor: pointer;
+         font-weight: 500;
+         border: 1px solid transparent;
+         border-radius: 1px;
+         height: 36px;
+         line-height: 34px;
+         font-size: 14px;
+         color: #ffffff;
+         background-color: #007c89;
+         transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+         padding: 0 18px;
+         flex: 1 1 calc(20% - 10px);
+         text-align: center;
+         padding: 0 12px; /* Adjust for proper spacing */
+         white-space: nowrap; /* Prevent text from wrapping */
          }
-         .brutalist-card__button:hover {
-         transform: translate(-2px, -2px);
-         box-shadow: 7px 7px 0 #000;
+         .custom-button:hover {
+         color: #ffffff;
+         background-color: #006570;
          }
-         .brutalist-card__button--mark:hover {
-         background-color: #296fbb;
-         border-color: #296fbb;
-         color: #fff;
-         box-shadow: 7px 7px 0 #004280;
+         .content {
+         display: flex;
+         justify-content: flex-end; /* Align cards to the right */
+         padding-right: 20px; /* Minimum gap to frame */
          }
-         .brutalist-card__button--read:hover {
-         background-color: #ff0000;
-         border-color: #ff0000;
-         color: #fff;
-         box-shadow: 7px 7px 0 #800000;
-         }
-         .brutalist-card__button:active {
-         transform: translate(5px, 5px);
-         box-shadow: none;
+         .container {
+         max-width: 800px; /* Adjust width to control the card section size */
          }
       </style>
    </head>
-   <body class="bg-white text-black">
-      <!-- Navigation -->
-      <nav class="fixed top-0 left-0 right-0 bg-black text-white z-50">
-         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="text-2xl font-bold">Nihar M</div>
-            <div class="space-x-4">
-               <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
-               <a href="projects.html" class="text-gray-300 hover:text-white transition">Projects</a>
-               <a href="https://www.linkedin.com/in/nihar-m" class="text-gray-300 hover:text-white transition">LinkedIn</a>
-            </div>
-         </div>
+  <body class="bg-teal-100">
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+         <a href="/" class="logo">NIHAR</a>
+         <span class="menu-toggle">&#9776;</span>
+         <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+         </ul>
       </nav>
       <!-- Main Content -->
-      <div class="content">
-         <div class="grid-container py-10">
-            <!-- <h1 class="text-center text-4xl font-bold">PROJECTS</h1> -->
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  
-                  <div class="brutalist-card__alert">Pytorch</div>
-               </div>
-               <div class="brutalist-card__message">
-                  Fill
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Pytorch" >github</a>
-        
-               </div>
-            </div>
-            </br>
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  
-                  <div class="brutalist-card__alert">OPENCV</div>
-               </div>
-               <div class="brutalist-card__message">
-             Fill
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/OpenCV" >github</a>
-                  
-               </div>
-            </div>
+      <div class="content bg-gray-100 py-10">
+         <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+                <div class="p-6">
+                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Pytorch</h2>
+                   <p class="text-gray-600 leading-relaxed">
+                     Definition: PyTorch is an open-source machine learning framework based on Python, primarily used for deep learning applications.
+What it does: Provides tools for building and training neural networks, enabling dynamic computation graphs for flexibility.
+Application: Widely used in computer vision, natural language processing, and reinforcement learning.
+Advantage: Offers easy debugging, GPU acceleration, and integration with Python libraries.
+
+                   </p>
+                   <div class="button-container">
+                      <a href="#" class="custom-button">Pdf</a>
+                      <a href="https://github.com/niharraju4/Pytorch" class="custom-button">GitHub</a>
+                      <!-- <a href="/polynomial-regression" class="custom-button">Jupyter</a> -->
+                   </div>
+                </div>
+             </div>
+          
            
-         
-            </br>
-       
-          
-          
-                
+            <!-- Card 5 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">OpenCV</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: OpenCV (Open Source Computer Vision Library) is a library designed for real-time computer vision and image processing tasks.
+                     What it does: Processes images and videos for applications like object detection, face recognition, and motion tracking.
+                     Application: Used in robotics, surveillance systems, and augmented reality projects.
+                     Advantage: Provides a rich set of functions for image analysis, with support for multiple programming languages.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/OpenCV" class="custom-button">GitHub</a>
+                     <!-- <a href="#" class="custom-button">Jupyter</a> -->
+                  </div>
+               </div>
+            </div>
+             <!-- Card 5 -->
+             <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Neural Networks</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Neural Networks are computing systems inspired by the structure and functioning of the human brain, designed to recognize patterns in data.
+What they do: Process data through layers of interconnected nodes (neurons) to identify relationships and make predictions.
+Application: Used in image recognition, natural language processing, autonomous systems, and more.
+Advantage: Capable of solving complex tasks by learning from large datasets and generalizing across scenarios.
+
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/OpenCV" class="custom-button">GitHub</a>
+                     <!-- <a href="#" class="custom-button">Jupyter</a> -->
+                  </div>
+               </div>
+            </div>
+             <!-- Card 5 -->
+             <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Tensorflow</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: TensorFlow is an open-source machine learning and deep learning framework developed by Google.
+                     What it does: Facilitates the development, training, and deployment of machine learning models with scalable computational capabilities.
+                     Application: Used in tasks like image classification, speech recognition, and text generation.
+                     Advantage: Supports deployment on a variety of platforms, including mobile, and offers a vast ecosystem of tools and pre-trained models.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/OpenCV" class="custom-button">GitHub</a>
+                     <!-- <a href="#" class="custom-button">Jupyter</a> -->
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
-      <!-- Foundation JS -->
-      <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
-      <footer class="bg-gray-800 text-gray-200 py-4">
+      <footer class="bg-black-800 text-gray-200 py-4">
          <div class="max-w-4xl mx-auto text-center">
             <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
-           
-               </a>
-            </div>
          </div>
       </footer>
    </body>
