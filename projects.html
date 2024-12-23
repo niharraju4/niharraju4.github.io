@@ -8,7 +8,7 @@
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
       <style>
          body {
-         background-color: #000000;
+            background-color: #defcf9 !important;
          color: #cbb6b6;
          font-family: 'Open Sans Condensed', sans-serif;
          }
@@ -83,7 +83,7 @@
          background-color: rgba(0, 0, 0, 0.1);
          color: #000;
          margin-bottom: 10px; /* Reduce margin between cards */
-         border-radius: 5px;
+         border-radius: 10px;
          }
          .card:hover {
          transform: scale(1.05);
@@ -112,7 +112,7 @@
          cursor: pointer;
          font-weight: 500;
          border: 1px solid transparent;
-         border-radius: 2px;
+         border-radius: 5px;
          height: 36px;
          line-height: 34px;
          font-size: 14px;
@@ -150,7 +150,7 @@
          </ul>
       </nav>
       <!-- Main Content -->
-      <div class="content bg-gray-100 py-10">
+      <div class="content  py-10">
          <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
             <!-- Card 1 -->
             <a href="/ml-project" class="card bg-white shadow-lg overflow-hidden block">
@@ -185,11 +185,15 @@
                      Natural Language Processing bridges the gap between human language and computer understanding, enabling machines to interpret, process, and generate human-like text. It powers applications like sentiment analysis, machine translation, chatbots, and virtual assistants. NLP combines computational linguistics with machine learning to analyze text and speech, making communication between humans and machines more natural and seamless. Advanced NLP techniques include tokenization, named entity recognition, and transformers for contextual understanding.
                   </p>
                   <div class="button-container">
-                     <button class="custom-button">Linear Regression</button>
-                     <button class="custom-button">Multiple Regression</button>
-                     <button class="custom-button">Polynomial Regression</button>
-                     <button class="custom-button">Naive Bayes</button>
-                     <button class="custom-button">Random Forest</button>
+                     <button class="custom-button">Spacy</button>
+                     <button class="custom-button">StopWords</button>
+                     <button class="custom-button">Bag of Words</button>
+                     <button class="custom-button">stemming</button>
+                     <button class="custom-button">Parts of Speech</button>
+                     <button class="custom-button">Named Entity Recognition</button>
+                     <button class="custom-button">TF-IDF</button>
+                     <button class="custom-button">Word2Vec</button>
+                     <button class="custom-button">Tokenization</button>
                   </div>
                </div>
             </a>
@@ -201,43 +205,61 @@
                      Deep Learning is an advanced subset of machine learning that mimics the workings of the human brain using artificial neural networks with multiple layers. It is highly effective in processing vast amounts of structured and unstructured data, making breakthroughs in tasks like image recognition, speech processing, and natural language understanding. DL algorithms automatically discover intricate patterns, driving innovation in fields such as autonomous vehicles, healthcare diagnostics, and personalization systems.
                   </p>
                   <div class="button-container">
-                     <button class="custom-button">Linear Regression</button>
-                     <button class="custom-button">Multiple Regression</button>
+                     <button class="custom-button">Pytorch</button>
+                     <button class="custom-button">OpenCV</button>
+                     <button class="custom-button">Neural Networks</button>
+                     <button class="custom-button">Tensorflow</button>
                   </div>
                </div>
             </a>
             <!-- Card 4 -->
-            <a href="/llm-project" class="card bg-white shadow-lg overflow-hidden block">
+            <a href="/llm-project.html" class="card bg-white shadow-lg overflow-hidden block">
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Large Language Models [LLMs]</h2>
                   <p class="text-gray-600 leading-relaxed">
                      Large Language Models are a revolutionary advancement in AI, trained on extensive datasets to generate human-like text, understand context, and perform a variety of language-related tasks. They power sophisticated applications such as conversational AI, text summarization, and content generation. Models like GPT-4 and ChatGPT utilize billions of parameters to offer nuanced and context-aware interactions, reshaping the way we approach AI-driven solutions.
                   </p>
                   <div class="button-container">
-                     <button class="custom-button">Linear Regression</button>
-                     <button class="custom-button">Multiple Regression</button>
-                     <button class="custom-button">Polynomial Regression</button>
-                     <button class="custom-button">Naive Bayes</button>
-                     <button class="custom-button">Random Forest</button>
+                     <button class="custom-button">Webparse Summerization</button>
+                     <button class="custom-button">Data Ingestion</button>
+                     <button class="custom-button">Data Transformation</button>
+                     <button class="custom-button">Embeddings</button>
+                     <button class="custom-button">Transformers</button>
+                     <button class="custom-button">Large Language Compute</button>
                   </div>
                </div>
             </a>
             <!-- Card 5 -->
-            <a href="/other-project" class="card bg-white shadow-lg overflow-hidden block">
+            <a href="/other_project.html" class="card bg-white shadow-lg overflow-hidden block">
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Other Datascience Projects</h2>
                   <p class="text-gray-600 leading-relaxed">
                      This category encompasses additional technologies and concepts that complement AI, such as cloud computing, data engineering, and MLOps. These tools and frameworks help scale AI models, manage data pipelines, and deploy solutions in production environments. The integration of AI with disciplines like IoT, robotics, and edge computing further expands its capabilities, enabling real-time and efficient problem-solving across diverse domains.
                   </p>
                   <div class="button-container">
-                     <button class="custom-button">Polynomial Regression</button>
+                     <button class="custom-button">Datascience capstone Project</button>
+                     <button class="custom-button">New York Uber</button>
+                     <button class="custom-button">Pancard</button>
+                     <button class="custom-button">Bitcoin</button>
                      <button class="custom-button">Naive Bayes</button>
-                     <button class="custom-button">Random Forest</button>
+                     <button class="custom-button">loan data Experimentation</button>
+                     <button class="custom-button">Amazon Analysis</button>
+                     <button class="custom-button">Data cleaning with Pandas</button>
                   </div>
                </div>
             </a>
          </div>
       </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+           const toggle = document.querySelector(".menu-toggle");
+           const navMenu = document.querySelector(".navbar ul");
+       
+           toggle.addEventListener("click", function () {
+             navMenu.classList.toggle("active");
+           });
+         });
+       </script>
       <footer class="bg-black-800 text-gray-200 py-4">
          <div class="max-w-4xl mx-auto text-center">
             <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
