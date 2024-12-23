@@ -3,272 +3,291 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Nihar M - Projects</title>
-      <!-- Foundation CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+      <title>Portfolio</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
       <style>
          body {
+         /* background-color: #defcf9 !important; */
+         color: #cbb6b6;
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         * {
          margin: 0;
-      
-         font-family: "Arial", sans-serif;
-         padding-top: 60px; /* Adjust this value based on your navbar height */
+         padding: 0;
+         box-sizing: border-box;
          }
-         .brutalist-card {
-         width: 1000px;
-         border: 4px solid #000;
-         background-color: #fff;
-         padding: 1.5rem;
-         box-shadow: 10px 10px 0 #000;
-         font-family: "Arial", sans-serif;
-         margin-left: -200;    /* Pushes the card to the right */
-         margin-right: auto;  /* Optional, ensures no right margin*/
-         }
-         .brutalist-card__header {
+         .navbar {
          display: flex;
+         justify-content: space-between;
          align-items: center;
-         gap: 1rem;
-         margin-bottom: 1rem;
-         border-bottom: 2px solid #000;
-         padding-bottom: 1rem;
-         }
-         .brutalist-card__icon {
-         flex-shrink: 0;
-         display: flex;
-         align-items: center;
-         justify-content: center;
          background-color: #000;
-         padding: 0.5rem;
+         padding: 10px 20px;
+         position: fixed; /* Make the navbar fixed */
+         width: 100%; /* Ensure it spans the full width */
+         top: 0; /* Stick to the top */
+         z-index: 1000; /* Ensure it stays on top of other elements */
          }
-         .brutalist-card__icon svg {
-         height: 1.5rem;
-         width: 1.5rem;
-         fill: #fff;
-         }
-         .brutalist-card__alert {
-         font-weight: 900;
-         color: #000;
+         .navbar .logo {
+         color: #fff;
          font-size: 1.5rem;
-         text-transform: uppercase;
-         }
-         .brutalist-card__message {
-         margin-top: 1rem;
-         color: #000;
-         font-size: 0.9rem;
-         line-height: 1.4;
-         border-bottom: 2px solid #000;
-         padding-bottom: 1rem;
-         font-weight: 600;
-         }
-         .brutalist-card__actions {
-         margin-top: 1rem;
-         display: flex;
-         justify-content: flex-end; /* Align buttons to the right */
-         gap: 0.5rem;
-         }
-         .brutalist-card__button {
-         display: block;
-         width: 21%;
-         padding: 1.0rem;
-         text-align: center;
-         font-size: 1rem;
-         font-weight: 700;
-         text-transform: uppercase;
-         border: 3px solid #000;
-         background-color: #fff;
-         color: #000;
-         position: relative;
-         transition: all 0.2s ease;
-         box-shadow: 5px 5px 0 #000;
-         overflow: hidden;
+         font-weight: bold;
          text-decoration: none;
-         margin-bottom: 1rem;
          }
-         .brutalist-card__button--read {
+         .navbar ul {
+         display: flex;
+         list-style: none;
+         }
+         .navbar ul li {
+         margin: 0 15px;
+         }
+         .navbar ul li a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 1rem;
+         transition: color 0.3s ease;
+         }
+         .navbar ul li a:hover {
+         color: #1abc9c;
+         }
+         .menu-toggle {
+         display: none;
+         color: #fff;
+         font-size: 1.5rem;
+         cursor: pointer;
+         }
+         @media (max-width: 768px) {
+         .navbar ul {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         background-color: #000;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         z-index: 1000;
+         }
+         .navbar ul.active {
+         display: flex;
+         }
+         .navbar ul li {
+         text-align: center;
+         margin: 10px 0;
+         }
+         .menu-toggle {
+         display: block;
+         }
+         }
+         .card {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         background-color: rgba(0, 0, 0, 0.1);
+         color: #000;
+         margin-bottom: 10px; /* Reduce margin between cards */
+         border-radius: 5px;
+         }
+         .card:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+         }
+         .card h2 {
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         footer {
          background-color: #000;
          color: #fff;
+         position: fixed; /* Make the footer fixed */
+         bottom: 0; /* Stick to the bottom */
+         width: 100%; /* Ensure it spans the full width */
          }
-         .brutalist-card__button::before {
-         content: "";
-         position: absolute;
-         top: 0;
-         left: -100%;
-         width: 100%;
-         height: 100%;
-         background: linear-gradient(
-         120deg,
-         transparent,
-         rgba(255, 255, 255, 0.3),
-         transparent
-         );
-         transition: all 0.6s;
+         .button-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 3px;
+         justify-content: center;
+         padding: 2px;
+        
          }
-         .brutalist-card__button:hover::before {
-         left: 100%;
+         .custom-button {
+         display: inline-block;
+         outline: none;
+         cursor: pointer;
+         font-weight: 500;
+         border: 1px solid transparent;
+         border-radius: 1px;
+         height: 36px;
+         line-height: 34px;
+         font-size: 14px;
+         color: #ffffff;
+         background-color: #007c89;
+         transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+         padding: 0 18px;
+         flex: 1 1 calc(20% - 10px);
+         text-align: center;
+         padding: 0 12px; /* Adjust for proper spacing */
+         white-space: nowrap; /* Prevent text from wrapping */
          }
-         .brutalist-card__button:hover {
-         transform: translate(-2px, -2px);
-         box-shadow: 7px 7px 0 #000;
+         .custom-button:hover {
+         color: #ffffff;
+         background-color: #006570;
          }
-         .brutalist-card__button--mark:hover {
-         background-color: #296fbb;
-         border-color: #296fbb;
-         color: #fff;
-         box-shadow: 7px 7px 0 #004280;
+         .content {
+         display: flex;
+         justify-content: flex-end; /* Align cards to the right */
+         padding-right: 20px; /* Minimum gap to frame */
          }
-         .brutalist-card__button--read:hover {
-         background-color: #ff0000;
-         border-color: #ff0000;
-         color: #fff;
-         box-shadow: 7px 7px 0 #800000;
-         }
-         .brutalist-card__button:active {
-         transform: translate(5px, 5px);
-         box-shadow: none;
+         .container {
+         max-width: 800px; /* Adjust width to control the card section size */
          }
       </style>
    </head>
-   <body class="bg-white text-black">
-      <!-- Navigation -->
-      <nav class="fixed top-0 left-0 right-0 bg-black text-white z-50">
-         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="text-2xl font-bold">Nihar M</div>
-            <div class="space-x-4">
-               <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
-               <a href="projects.html" class="text-gray-300 hover:text-white transition">Projects</a>
-               <a href="https://www.linkedin.com/in/nihar-m" class="text-gray-300 hover:text-white transition">LinkedIn</a>
-            </div>
-         </div>
+  <body class="bg-teal-100">
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+         <a href="/index" class="logo">NIHAR</a>
+         <span class="menu-toggle">&#9776;</span>
+         <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+         </ul>
       </nav>
       <!-- Main Content -->
-      <div class="content">
-         <div class="grid-container py-10">
-            
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  <div class="brutalist-card__alert">Datascience capstone Project</div>
-               </div>
-               <div class="brutalist-card__message">
-         Fill
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark"  href="#"
-                  >PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/DataScienceCapstone" >github</a>
-                
-               </div>
-            </div>
-            </br>
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  <div class="brutalist-card__alert">New York Uber</div>
-               </div>
-               <div class="brutalist-card__message">
-                  content
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#"
-                     >PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Natural_language_processing/blob/main/stop_words.ipynb">github</a
-                     >
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Uber_New_York/blob/main/Uber_Newyork_DataAnalysis.ipynb">Jupyter</a>
-               </div>
-            </div>
-            </br>
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  <div class="brutalist-card__alert">Pancard</div>
-               </div>
-               <div class="brutalist-card__message">
-                  Content
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Pan-card">github</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Pan-card/blob/main/Pancardtampering.ipynb">Jupyter</a>
+      <div class="content bg-gray-100 py-10">
+         <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+                <div class="p-6">
+                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Datascience capstone Project</h2>
+                   <p class="text-gray-600 leading-relaxed">
+                     Definition: A Data Science Capstone Project is a comprehensive, end-to-end data analysis or modeling project that applies learned skills to solve real-world problems.
+                     What it does: Combines data collection, cleaning, modeling, and visualization to derive actionable insights.
+                     Application: Demonstrates expertise in data science and showcases proficiency in handling complex datasets.
+                     Outcome: Provides practical solutions and builds a strong portfolio for professional or academic growth.
+                     
+                   </p>
+                   <div class="button-container">
+                      <a href="#" class="custom-button">Pdf</a>
+                      <a href="https://github.com/niharraju4/DataScienceCapstone" class="custom-button">GitHub</a>
+                      <a href="#" class="custom-button">Jupyter</a>
+                   </div>
+                </div>
+             </div>
+            <!-- Card 2 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">New York Uber</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Analysis of New York Uber data focuses on trends, patterns, and operational insights from ride-hailing services.
+                     What it does: Examines key metrics like ride demand, popular routes, and peak usage times.
+                     Application: Aids in optimizing operations, improving customer service, and urban planning decisions.
+                     Advantage: Provides a data-driven approach to enhance the efficiency of ride-sharing services.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Uber_New_York/blob/main/Uber_Newyork_DataAnalysis.ipynb" class="custom-button">Jupyter</a>
+                  </div>
                </div>
             </div>
-            </br>
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  <div class="brutalist-card__alert">Bitcoin</div>
-               </div>
-               <div class="brutalist-card__message">
-                  Stemming is the process of reducing a word to its root form or base form, often by removing suffixes and prefixes. The goal of stemming is to group words with the same meaning but different forms together, so they can be analyzed as a single item. This technique is widely used in natural language processing (NLP) and information retrieval systems, such as search engines, to improve the consistency and efficiency of data processing.
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Bitcoin">github</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Bitcoin/blob/main/Bitcoin_final.ipynb">Jupyter</a>
-               </div>
-            </div>
-            </br>
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  <div class="brutalist-card__alert">loan data Experimentaion</div>
-               </div>
-               <div class="brutalist-card__message">
-                  Content
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Uber_New_York">github</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/loan_data_expirementation/blob/main/Loan_Data_analysis.ipynb">Jupyter</a>
+            <!-- Card 3 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Pancard</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: PAN (Permanent Account Number) is a unique identification code issued by the Indian Income Tax Department for financial transactions.
+                     What it does: Tracks taxable income, financial transactions, and tax payments of individuals and entities.
+                     Application: Mandatory for tax filing, opening bank accounts, and high-value transactions in India.
+                     Advantage: Ensures accountability and helps in reducing financial fraud and tax evasion.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Pan-card" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Pan-card/blob/main/Pancardtampering.ipynb" class="custom-button">Jupyter</a>
+                  </div>
                </div>
             </div>
-            </br>
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  <div class="brutalist-card__alert">Amazon Analysis</div>
-               </div>
-               <div class="brutalist-card__message">
-                  Content
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/amazon_analysis">github</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/amazon_analysis/blob/main/amazon_analysis.ipynb">Jupyter</a>
-               </div>
-            </div>
-            </br>
-            <div class="brutalist-card">
-               <div class="brutalist-card__header">
-                  <div class="brutalist-card__alert">Data cleaning with Pandas</div>
-               </div>
-               <div class="brutalist-card__message">
-                  Content 
-               </div>
-               <div class="brutalist-card__actions">
-                  <a class="brutalist-card__button brutalist-card__button--mark" href="#">PDF</a>
-                  <a class="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Data_Cleaning-Pandas">github</a>
-                  <!-- <a class="brutalist-card__button brutalist-card__button--read" href="#">Jupyter</a> -->
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Bitcoin</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Bitcoin is a decentralized digital currency that operates on blockchain technology without the need for a central authority.
+                     What it does: Enables peer-to-peer transactions using cryptographic protocols for security and transparency.
+                     Application: Used for payments, investments, and as a store of value in the global financial ecosystem.
+                     Advantage: Offers low transaction costs, quick transfers, and financial inclusion for the unbanked.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Bitcoin" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Bitcoin/blob/main/Bitcoin_final.ipynb" class="custom-button">Jupyter</a>
+                  </div>
                </div>
             </div>
-            </br>
-          
-          
-            
            
+            <!-- Card 5 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">loan data Experimentaion</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Loan data experimentation involves analyzing loan datasets to derive patterns and insights for risk assessment and decision-making.
+                     What it does: Identifies trends like default probabilities, customer behavior, and loan approval criteria.
+                     Application: Used by financial institutions for credit scoring, loan disbursement, and risk management.
+                     Outcome: Improves decision-making and reduces financial risks for lenders.
+                     
+            
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Amazon Analysis</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Amazon analysis refers to the examination of data from Amazon's platform, including sales, reviews, and customer behavior.
+                     What it does: Identifies patterns in product popularity, customer satisfaction, and market trends.
+                     Application: Used by sellers to optimize pricing, improve product listings, and enhance marketing strategies.
+                     Advantage: Drives data-backed decisions to increase profitability and customer engagement.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/amazon_analysis" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/amazon_analysis/blob/main/amazon_analysis.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Data cleaning with Pandas</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Data cleaning with Pandas involves preprocessing datasets using the Pandas library in Python to handle missing, duplicate, or inconsistent data.
+                     What it does: Improves data quality by applying operations like filtering, filling missing values, and data type conversion.
+                     Application: Prepares data for analysis, visualization, and machine learning pipelines.
+                     Advantage: Ensures accuracy and reliability in data-driven projects.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Data_Cleaning-Pandas" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
            
-         </div>
-      </div>
-      <!-- Foundation JS -->
-      <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
-      <footer class="bg-gray-800 text-gray-200 py-4">
+     
+        
+</div>
+      <footer class="bg-black-800 text-gray-200 py-4">
          <div class="max-w-4xl mx-auto text-center">
             <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
-            <!-- <p class="text-sm">Designed with ❤️ using Tailwind CSS</p> -->
-            <div class="flex justify-center space-x-4 mt-2">
-               <!-- <a href="https://github.com/niharraju4" target="_blank" class="text-gray-400 hover:text-white">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M12 0a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6V20c-3.2.7-3.8-1.5-3.8-1.5-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1 3 1 .1-.6.4-1 .7-1.2-2.6-.3-5.4-1.3-5.4-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.2 1 .9-.2 1.8-.3 2.8-.3s1.9.1 2.8.3c2.2-1.3 3.2-1 3.2-1 .6 1.6.2 2.9.1 3.2.7.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.4 5.7.4.3.7.9.7 1.8v2.6c0 .3.2.7.8.6A12 12 0 0 0 12 0z"/>
-                  </svg>
-                  </a>
-                  -->
-            </div>
          </div>
       </footer>
    </body>
