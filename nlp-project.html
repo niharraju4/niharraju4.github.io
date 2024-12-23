@@ -9,7 +9,7 @@
       <style>
          body {
          /* background-color: #defcf9 !important; */
-         color: #cbb6b6;
+         background-color: #defcf9 !important;
          font-family: 'Open Sans Condensed', sans-serif;
          }
          * {
@@ -83,7 +83,7 @@
          background-color: rgba(0, 0, 0, 0.1);
          color: #000;
          margin-bottom: 10px; /* Reduce margin between cards */
-         border-radius: 5px;
+         border-radius: 10px;
          }
          .card:hover {
          transform: scale(1.05);
@@ -113,7 +113,7 @@
          cursor: pointer;
          font-weight: 500;
          border: 1px solid transparent;
-         border-radius: 1px;
+         border-radius: 5px;
          height: 36px;
          line-height: 34px;
          font-size: 14px;
@@ -149,25 +149,26 @@
          <ul>
             <li><a href="/index">Home</a></li>
             <li><a href="/projects">Projects</a></li>
+            <li><a href="#">CV</a></li>
          </ul>
       </nav>
       <!-- Main Content -->
-      <div class="content bg-gray-100 py-10">
+      <div class="content  py-10">
          <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
             <div class="card bg-white shadow-lg overflow-hidden block">
                 <div class="p-6">
                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Spacy</h2>
                    <p class="text-gray-600 leading-relaxed">
-                     Definition: SpaCy is an advanced open-source library for Natural Language Processing (NLP).
-What it does: Provides tools for tokenization, named entity recognition, and dependency parsing.
-Application: Supports multiple languages, making it versatile for text processing tasks.
-Advanced Features: Seamlessly integrates with deep learning frameworks like TensorFlow and PyTorch.
+                     Definition: SpaCy is an advanced open-source library for Natural Language Processing (NLP).</br>
+What it does: Provides tools for tokenization, named entity recognition, and dependency parsing.</br>
+Application: Supports multiple languages, making it versatile for text processing tasks..</br>
+Advanced Features: Seamlessly integrates with deep learning frameworks like TensorFlow and PyTorch.</br>
 
                    </p>
                    <div class="button-container">
                       <a href="#" class="custom-button">Pdf</a>
                       <a href="https://github.com/niharraju4/Natural_language_processing/tree/main/Spacy" class="custom-button">GitHub</a>
-                      <!-- <a href="#" class="custom-button">Jupyter</a> -->
+                      <a href="#" class="custom-button">Jupyter</a>
                    </div>
                 </div>
              </div>
@@ -176,9 +177,9 @@ Advanced Features: Seamlessly integrates with deep learning frameworks like Tens
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">StopWords</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Stopwords are commonly used words like 'the,' 'is,' and 'and.'
-                     What they do: They are often removed during text preprocessing to reduce noise.
-                     Efficiency: Helps in reducing data size for faster processing.
+                     Definition: Stopwords are commonly used words like 'the,' 'is,' and 'and.' </br>
+                     What they do: They are often removed during text preprocessing to reduce noise.</br>
+                     Efficiency: Helps in reducing data size for faster processing.</br>
                      Special Use Cases: Retaining stopwords may be necessary for tasks requiring contextual understanding.
                      
                   </p>
@@ -194,15 +195,15 @@ Advanced Features: Seamlessly integrates with deep learning frameworks like Tens
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Bag of Words</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: A model that represents text as word frequency counts.
-What it does: Converts text into numerical format, ignoring grammar and word order.
-Application: Used in text classification and clustering tasks.
+                     Definition: A model that represents text as word frequency counts.</br>
+What it does: Converts text into numerical format, ignoring grammar and word order.</br>
+Application: Used in text classification and clustering tasks.</br>
 Limitation: Fails to capture semantic relationships between words.
 
                   </p>
                   <div class="button-container">
                      <a href="#" class="custom-button">Pdf</a>
-                     <a href="brutalist-card__button brutalist-card__button--read" href="https://github.com/niharraju4/Natural_language_processing/tree/main/spam_classifier" class="custom-button">GitHub</a>
+                     <a  href="https://github.com/niharraju4/Natural_language_processing/tree/main/spam_classifier" class="custom-button">GitHub</a>
                      <a href="https://github.com/niharraju4/Natural_language_processing/blob/main/spam_classifier/bag_of_words.ipynb" class="custom-button">Jupyter</a>
                   </div>
                </div>
@@ -212,16 +213,16 @@ Limitation: Fails to capture semantic relationships between words.
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">stemming</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: A process to reduce words to their root form by removing suffixes.
-                     What it does: Treats similar words like 'running' and 'runs' as the same.
-                     Efficiency: Simplifies text analysis by normalizing variations.
+                     Definition: A process to reduce words to their root form by removing suffixes.</br>
+                     What it does: Treats similar words like 'running' and 'runs' as the same.</br>
+                     Efficiency: Simplifies text analysis by normalizing variations.</br>
                      Caution: Can lead to over-reduction, impacting the accuracy of results.
                      
                   </p>
                   <div class="button-container">
                      <a href="#" class="custom-button">Pdf</a>
-                     <a href="https://github.com/niharraju4/Natural_language_processing/blob/main/preprocessingstemmingusingNLTK.ipynb" class="custom-button">GitHub</a>
-                     <a href="#" class="custom-button">Jupyter</a>
+                     <a href="https://github.com/niharraju4/Natural_language_processing/blob/main/" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Natural_language_processing/blob/main/preprocessingstemmingusingNLTK.ipynb" class="custom-button">Jupyter</a>
                   </div>
                </div>
             </div>
@@ -231,9 +232,9 @@ Limitation: Fails to capture semantic relationships between words.
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Parts of Speech</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Assigns grammatical categories (noun, verb, adjective) to words.
-                     What it does: Helps understand sentence structure and meaning.
-                     Application: Essential for tasks like syntactic parsing and sentiment analysis.
+                     Definition: Assigns grammatical categories (noun, verb, adjective) to words.</br>
+                     What it does: Helps understand sentence structure and meaning.</br>
+                     Application: Essential for tasks like syntactic parsing and sentiment analysis.</br>
                      Integration: Often combined with dependency parsing for deeper insights.
                      
             
@@ -250,9 +251,9 @@ Limitation: Fails to capture semantic relationships between words.
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Named Entity Recognition</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Identifies entities like names, dates, and locations in text.
-What it does: Extracts structured information from unstructured text.
-Application: Used in chatbots, search engines, and document processing.
+                     Definition: Identifies entities like names, dates, and locations in text.</br>
+What it does: Extracts structured information from unstructured text.</br>
+Application: Used in chatbots, search engines, and document processing.</br>
 Special Features: Can classify domain-specific entities like products or legal terms.
 
                   </p>
@@ -268,9 +269,9 @@ Special Features: Can classify domain-specific entities like products or legal t
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">TF-IDF </h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: A statistical technique to measure word importance in a document.
-What it does: Emphasizes rare terms while downplaying frequent ones.
-Application: Widely used in keyword extraction and document ranking.
+                     Definition: A statistical technique to measure word importance in a document.</br>
+What it does: Emphasizes rare terms while downplaying frequent ones.</br>
+Application: Widely used in keyword extraction and document ranking.</br>
 Relevance: Crucial for search engine optimization and text similarity tasks.
 
                   </p>
@@ -286,9 +287,9 @@ Relevance: Crucial for search engine optimization and text similarity tasks.
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Word2Vec</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: A neural network-based model that converts words into vectors.
-                     What it does: Captures semantic relationships between words in vector space.
-                     Application: Used in recommendation systems and sentiment analysis.
+                     Definition: A neural network-based model that converts words into vectors.</br>
+                     What it does: Captures semantic relationships between words in vector space.</br>
+                     Application: Used in recommendation systems and sentiment analysis.</br>
                      Advanced Features: Produces embeddings with properties like semantic clustering.
                      
                   </p>
@@ -304,9 +305,9 @@ Relevance: Crucial for search engine optimization and text similarity tasks.
                <div class="p-6">
                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Tokenization</h2>
                   <p class="text-gray-600 leading-relaxed">
-                     Definition: Breaks text into smaller units, such as words or sentences.
-                     What it does: Prepares text for further analysis in NLP tasks.
-                     Application: Enables parsing, machine translation, and sentiment analysis.
+                     Definition: Breaks text into smaller units, such as words or sentences.</br>
+                     What it does: Prepares text for further analysis in NLP tasks.</br>
+                     Application: Enables parsing, machine translation, and sentiment analysis.</br>
                      Flexibility: Can be tailored to handle contractions or complex word structures.
                      
                   </p>
@@ -317,12 +318,17 @@ Relevance: Crucial for search engine optimization and text similarity tasks.
                   </div>
                </div>
             </div>
-            
-           
-           
-         <!-- Card 5 -->
-        
       </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+           const toggle = document.querySelector(".menu-toggle");
+           const navMenu = document.querySelector(".navbar ul");
+       
+           toggle.addEventListener("click", function () {
+             navMenu.classList.toggle("active");
+           });
+         });
+       </script>
       <footer class="bg-black-800 text-gray-200 py-4">
          <div class="max-w-4xl mx-auto text-center">
             <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
