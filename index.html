@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+   <!-- https://github.com/ritaly/HTML-CSS-CV-demo?tab=readme-ov-file -->
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,44 +64,20 @@
              cursor: pointer;
          }
      
-         @media (max-width: 768px) {
-             .navbar ul {
-                 display: none;
-                 flex-direction: column;
-                 width: 100%;
-                 background-color: #000;
-                 position: absolute;
-                 top: 60px;
-                 left: 0;
-                 z-index: 1000;
-             }
-     
-             .navbar ul.active {
-                 display: flex;
-             }
-     
-             .navbar ul li {
-                 text-align: center;
-                 margin: 10px 0;
-             }
-     
-             .menu-toggle {
-                 display: block;
-             }
-         }
+        
+         
      </style>
      
    </head>
    <body>
       <!-- Navigation Menu -->
       <nav class="navbar">
-         <a href="#" class="logo">NIHAR</a>
+         <a href="/index" class="logo">NIHAR</a>
          <span class="menu-toggle">&#9776;</span>
          <ul>
-            <li><a href="">Home</a></li>
-<!--             <li><a href="">About</a></li> -->
-            <li><a href="projects">Projects</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="#">CV</a></li>
          </ul>
       </nav>
       <!-- Hero Section --> 
@@ -215,23 +192,16 @@
                </div>
       </section>
       </div>
-      <!-- Smooth Scroll Script 
       <script>
-         document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-               e.preventDefault();
-               document.querySelector(this.getAttribute('href')).scrollIntoView({
-                  behavior: 'smooth'
-               });
-            });
-         });
-         const toggle = document.querySelector('.menu-toggle');
-           const navLinks = document.querySelector('.navbar ul');
-         
-           toggle.addEventListener('click', () => {
-               navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+         document.addEventListener("DOMContentLoaded", function () {
+           const toggle = document.querySelector(".menu-toggle");
+           const navMenu = document.querySelector(".navbar ul");
+       
+           toggle.addEventListener("click", function () {
+             navMenu.classList.toggle("active");
            });
-      </script> -->
+         });
+       </script>
       <!-- Footer Section -->
       <footer class="bg-gray-800 text-gray-200 py-4">
       <div class="max-w-4xl mx-auto text-center">
