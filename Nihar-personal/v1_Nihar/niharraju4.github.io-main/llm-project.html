@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfolio</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <style>
+         body {
+       
+         background-color: #defcf9 !important;
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #000;
+         padding: 10px 20px;
+         position: fixed; /* Make the navbar fixed */
+         width: 100%; /* Ensure it spans the full width */
+         top: 0; /* Stick to the top */
+         z-index: 1000; /* Ensure it stays on top of other elements */
+         }
+         .navbar .logo {
+         color: #fff;
+         font-size: 1.5rem;
+         font-weight: bold;
+         text-decoration: none;
+         }
+         .navbar ul {
+         display: flex;
+         list-style: none;
+         }
+         .navbar ul li {
+         margin: 0 15px;
+         }
+         .navbar ul li a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 1rem;
+         transition: color 0.3s ease;
+         }
+         .navbar ul li a:hover {
+         color: #1abc9c;
+         }
+         .menu-toggle {
+         display: none;
+         color: #fff;
+         font-size: 1.5rem;
+         cursor: pointer;
+         }
+         @media (max-width: 768px) {
+         .navbar ul {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         background-color: #000;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         z-index: 1000;
+         }
+         .navbar ul.active {
+         display: flex;
+         }
+         .navbar ul li {
+         text-align: center;
+         margin: 10px 0;
+         }
+         .menu-toggle {
+         display: block;
+         }
+         }
+         .card {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         background-color: rgba(0, 0, 0, 0.1);
+         color: #000;
+         margin-bottom: 10px; /* Reduce margin between cards */
+         border-radius: 3px;
+         }
+         .card:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+         }
+         .card h2 {
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         footer {
+         background-color: #000;
+         color: #fff;
+         position: fixed; /* Make the footer fixed */
+         bottom: 0; /* Stick to the bottom */
+         width: 100%; /* Ensure it spans the full width */
+         }
+         .button-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 3px;
+         justify-content: center;
+         padding: 2px;
+        
+         }
+         .custom-button {
+         display: inline-block;
+         outline: none;
+         cursor: pointer;
+         font-weight: 500;
+         border: 1px solid transparent;
+         border-radius: 1px;
+         height: 36px;
+         line-height: 34px;
+         font-size: 14px;
+         color: #ffffff;
+         background-color: #007c89;
+         transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+         padding: 0 18px;
+         flex: 1 1 calc(20% - 10px);
+         text-align: center;
+         padding: 0 12px; /* Adjust for proper spacing */
+         white-space: nowrap; /* Prevent text from wrapping */
+         }
+         .custom-button:hover {
+         color: #ffffff;
+         background-color: #006570;
+         }
+         .content {
+         display: flex;
+         justify-content: flex-end; /* Align cards to the right */
+         padding-right: 20px; /* Minimum gap to frame */
+         }
+         .container {
+         max-width: 800px; /* Adjust width to control the card section size */
+         }
+      </style>
+   </head>
+  <body class="bg-teal-100">
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+         <a href="/index" class="logo">NIHAR</a>
+         <span class="menu-toggle">&#9776;</span>
+         <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="#">CV</a></li>
+         </ul>
+      </nav>
+      <!-- Main Content -->
+      <div class="content  py-10">
+         <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+                <div class="p-6">
+                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Webparse Summerization</h2>
+                   <p class="text-gray-600 leading-relaxed">
+                     Definition: Webparse summarization extracts key information from web pages and converts it into concise summaries.</br>
+                     What it does: Automatically analyzes web content, identifying essential details while discarding irrelevant data.</br>
+                     Application: Used for creating digestible content for news aggregation, research, and knowledge discovery.</br>
+                     Advantage: Saves time by summarizing large volumes of information efficiently.
+                     
+                   </p>
+                   <div class="button-container">
+                      <a href="#" class="custom-button">Pdf</a>
+                      <a href="https://github.com/niharraju4/Large_Language_models_Compute/tree/main/Webparse_summerization" class="custom-button">GitHub</a>
+                      <a href="https://github.com/niharraju4/Large_Language_models_Compute/blob/main/Webparse_summerization/Webparse_summirization.ipynb" class="custom-button">Jupyter</a> 
+                   </div>
+                </div>
+             </div>
+            <!-- Card 2 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Data Ingestion</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Data ingestion is the process of importing and transferring data from various sources into a storage or processing system.</br>
+                     What it does: Collects structured and unstructured data for further analysis or storage.</br>
+                     Application: Widely used in ETL pipelines, data lakes, and real-time analytics platforms.</br>
+                     Scalability: Supports batch and streaming ingestion for handling large-scale data.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/LLM-s-Large-language-Models/tree/main/DataIngestion" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/LLM-s-Large-language-Models/blob/main/DataIngestion/DataIngestion.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Data Transformation</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Data transformation is the process of converting raw data into a usable format for analysis or storage.</br>
+                     What it does: Applies operations like filtering, normalization, and aggregation to prepare data. </br>
+                     Application: Essential in data preprocessing for machine learning and business intelligence workflows.</br>
+                     Advantage: Ensures consistency, accuracy, and usability of data.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/LLM-s-Large-language-Models/tree/main/DataTransformationr" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Embeddings</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Embeddings are numerical vector representations of data, capturing relationships and semantic meanings.</br>
+What it does: Transforms text, images, or other data into high-dimensional vectors for machine learning.</br>
+Application: Widely used in NLP tasks like semantic search, sentiment analysis, and recommendation systems.</br>
+Advantage: Enables efficient similarity comparison and downstream task performance improvements.
+
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/LLM-s-Large-language-Models/tree/main/Embeddings" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+           
+            <!-- Card 5 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Transformers-Fake News and Twitter Multiclass sentimental classification]</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Transformers are advanced machine learning architectures designed for sequence-to-sequence tasks, such as classification and translation.</br>
+                     What it does: Analyze and classify text for detecting fake news or performing sentiment analysis with high accuracy.</br>
+                     Application: Used in social media monitoring, misinformation detection, and opinion mining.</br>
+                     Advantage: Handles large datasets effectively, leveraging attention mechanisms for contextual understanding.
+                     
+            
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Transformers" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Large Language Compute</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Large Language Compute refers to processing tasks involving massive language models like GPT or BERT.</br>
+What it does: Powers applications like chatbots, summarization, and creative content generation.</br>
+Application: Used in advanced NLP tasks such as question answering, translation, and conversational AI.</br>
+Advantage: Offers unparalleled language understanding and generation capabilities at scale.
+
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Large_Language_models_Compute" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+           
+           
+           
+            
+           
+           
+         <!-- Card 5 -->
+        
+      </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+           const toggle = document.querySelector(".menu-toggle");
+           const navMenu = document.querySelector(".navbar ul");
+       
+           toggle.addEventListener("click", function () {
+             navMenu.classList.toggle("active");
+           });
+         });
+       </script>
+      <footer class="bg-black-800 text-gray-200 py-4">
+         <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
+         </div>
+      </footer>
+   </body>
+</html>

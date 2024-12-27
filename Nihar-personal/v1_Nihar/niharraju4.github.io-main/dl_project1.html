@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfolio</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <style>
+         body {
+         /* background-color: #defcf9 !important; */
+         background-color: #defcf9 !important;
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #000;
+         padding: 10px 20px;
+         position: fixed; /* Make the navbar fixed */
+         width: 100%; /* Ensure it spans the full width */
+         top: 0; /* Stick to the top */
+         z-index: 1000; /* Ensure it stays on top of other elements */
+         }
+         .navbar .logo {
+         color: #fff;
+         font-size: 1.5rem;
+         font-weight: bold;
+         text-decoration: none;
+         }
+         .navbar ul {
+         display: flex;
+         list-style: none;
+         }
+         .navbar ul li {
+         margin: 0 15px;
+         }
+         .navbar ul li a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 1rem;
+         transition: color 0.3s ease;
+         }
+         .navbar ul li a:hover {
+         color: #1abc9c;
+         }
+         .menu-toggle {
+         display: none;
+         color: #fff;
+         font-size: 1.5rem;
+         cursor: pointer;
+         }
+         @media (max-width: 768px) {
+         .navbar ul {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         background-color: #000;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         z-index: 1000;
+         }
+         .navbar ul.active {
+         display: flex;
+         }
+         .navbar ul li {
+         text-align: center;
+         margin: 10px 0;
+         }
+         .menu-toggle {
+         display: block;
+         }
+         }
+         .card {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         background-color: rgba(0, 0, 0, 0.1);
+         color: #000;
+         margin-bottom: 10px; /* Reduce margin between cards */
+         border-radius: 10px;
+         }
+         .card:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+         }
+         .card h2 {
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         footer {
+         background-color: #000;
+         color: #fff;
+         position: fixed; /* Make the footer fixed */
+         bottom: 0; /* Stick to the bottom */
+         width: 100%; /* Ensure it spans the full width */
+         }
+         .button-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 3px;
+         justify-content: center;
+         padding: 2px;
+        
+         }
+         .custom-button {
+         display: inline-block;
+         outline: none;
+         cursor: pointer;
+         font-weight: 500;
+         border: 1px solid transparent;
+         border-radius: 5px;
+         height: 36px;
+         line-height: 34px;
+         font-size: 14px;
+         color: #ffffff;
+         background-color: #007c89;
+         transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+         padding: 0 18px;
+         flex: 1 1 calc(20% - 10px);
+         text-align: center;
+         padding: 0 12px; /* Adjust for proper spacing */
+         white-space: nowrap; /* Prevent text from wrapping */
+         }
+         .custom-button:hover {
+         color: #ffffff;
+         background-color: #006570;
+         }
+         .content {
+         display: flex;
+         justify-content: flex-end; /* Align cards to the right */
+         padding-right: 20px; /* Minimum gap to frame */
+         }
+         .container {
+         max-width: 800px; /* Adjust width to control the card section size */
+         }
+      </style>
+   </head>
+  <body class="bg-teal-100">
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+         <a href="/" class="logo">NIHAR</a>
+         <span class="menu-toggle">&#9776;</span>
+         <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+         </ul>
+      </nav>
+      <!-- Main Content -->
+      <div class="content  py-10">
+         <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+                <div class="p-6">
+                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Pytorch</h2>
+                   <p class="text-gray-600 leading-relaxed">
+                     Definition: PyTorch is an open-source machine learning framework based on Python, primarily used for deep learning applications.</br>
+What it does: Provides tools for building and training neural networks, enabling dynamic computation graphs for flexibility.</br>
+Application: Widely used in computer vision, natural language processing, and reinforcement learning.</br>
+Advantage: Offers easy debugging, GPU acceleration, and integration with Python libraries.
+
+                   </p>
+                   <div class="button-container">
+                      <a href="#" class="custom-button">Pdf</a>
+                      <a href="https://github.com/niharraju4/Pytorch" class="custom-button">GitHub</a>
+                      <!-- <a href="/polynomial-regression" class="custom-button">Jupyter</a> -->
+                   </div>
+                </div>
+             </div>
+          
+           
+            <!-- Card 5 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">OpenCV</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: OpenCV (Open Source Computer Vision Library) is a library designed for real-time computer vision and image processing tasks.</br>
+                     What it does: Processes images and videos for applications like object detection, face recognition, and motion tracking.</br>
+                     Application: Used in robotics, surveillance systems, and augmented reality projects.</br>
+                     Advantage: Provides a rich set of functions for image analysis, with support for multiple programming languages.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/OpenCV" class="custom-button">GitHub</a>
+                     <!-- <a href="#" class="custom-button">Jupyter</a> -->
+                  </div>
+               </div>
+            </div>
+             <!-- Card 5 -->
+             <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Neural Networks</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Neural Networks are computing systems inspired by the structure and functioning of the human brain, designed to recognize patterns in data.</br>
+What they do: Process data through layers of interconnected nodes (neurons) to identify relationships and make predictions.</br>
+Application: Used in image recognition, natural language processing, autonomous systems, and more.</br>
+Advantage: Capable of solving complex tasks by learning from large datasets and generalizing across scenarios.
+
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/OpenCV" class="custom-button">GitHub</a>
+                     <!-- <a href="#" class="custom-button">Jupyter</a> -->
+                  </div>
+               </div>
+            </div>
+             <!-- Card 5 -->
+             <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Tensorflow</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: TensorFlow is an open-source machine learning and deep learning framework developed by Google.</br>
+                     What it does: Facilitates the development, training, and deployment of machine learning models with scalable computational capabilities.</br>
+                     Application: Used in tasks like image classification, speech recognition, and text generation.</br>
+                     Advantage: Supports deployment on a variety of platforms, including mobile, and offers a vast ecosystem of tools and pre-trained models.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/OpenCV" class="custom-button">GitHub</a>
+                     <!-- <a href="#" class="custom-button">Jupyter</a> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+           const toggle = document.querySelector(".menu-toggle");
+           const navMenu = document.querySelector(".navbar ul");
+       
+           toggle.addEventListener("click", function () {
+             navMenu.classList.toggle("active");
+           });
+         });
+       </script>
+      <footer class="bg-black-800 text-gray-200 py-4">
+         <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
+         </div>
+      </footer>
+   </body>
+</html>

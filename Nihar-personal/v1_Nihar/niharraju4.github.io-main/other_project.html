@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfolio</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <style>
+         body {
+         
+         background-color: #defcf9 !important;
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #000;
+         padding: 10px 20px;
+         position: fixed; /* Make the navbar fixed */
+         width: 100%; /* Ensure it spans the full width */
+         top: 0; /* Stick to the top */
+         z-index: 1000; /* Ensure it stays on top of other elements */
+         }
+         .navbar .logo {
+         color: #fff;
+         font-size: 1.5rem;
+         font-weight: bold;
+         text-decoration: none;
+         }
+         .navbar ul {
+         display: flex;
+         list-style: none;
+         }
+         .navbar ul li {
+         margin: 0 15px;
+         }
+         .navbar ul li a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 1rem;
+         transition: color 0.3s ease;
+         }
+         .navbar ul li a:hover {
+         color: #1abc9c;
+         }
+         .menu-toggle {
+         display: none;
+         color: #fff;
+         font-size: 1.5rem;
+         cursor: pointer;
+         }
+         @media (max-width: 768px) {
+         .navbar ul {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         background-color: #000;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         z-index: 1000;
+         }
+         .navbar ul.active {
+         display: flex;
+         }
+         .navbar ul li {
+         text-align: center;
+         margin: 10px 0;
+         }
+         .menu-toggle {
+         display: block;
+         }
+         }
+         .card {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         background-color: rgba(0, 0, 0, 0.1);
+         color: #000;
+         margin-bottom: 10px; /* Reduce margin between cards */
+         border-radius: 3px;
+         }
+         .card:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+         }
+         .card h2 {
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         footer {
+         background-color: #000;
+         color: #fff;
+         position: fixed; /* Make the footer fixed */
+         bottom: 0; /* Stick to the bottom */
+         width: 100%; /* Ensure it spans the full width */
+         }
+         .button-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 3px;
+         justify-content: center;
+         padding: 2px;
+        
+         }
+         .custom-button {
+         display: inline-block;
+         outline: none;
+         cursor: pointer;
+         font-weight: 500;
+         border: 1px solid transparent;
+         border-radius: 1px;
+         height: 36px;
+         line-height: 34px;
+         font-size: 14px;
+         color: #ffffff;
+         background-color: #007c89;
+         transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+         padding: 0 18px;
+         flex: 1 1 calc(20% - 10px);
+         text-align: center;
+         padding: 0 12px; /* Adjust for proper spacing */
+         white-space: nowrap; /* Prevent text from wrapping */
+         }
+         .custom-button:hover {
+         color: #ffffff;
+         background-color: #006570;
+         }
+         .content {
+         display: flex;
+         justify-content: flex-end; /* Align cards to the right */
+         padding-right: 20px; /* Minimum gap to frame */
+         }
+         .container {
+         max-width: 800px; /* Adjust width to control the card section size */
+         }
+      </style>
+   </head>
+  <body class="bg-teal-100">
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+         <a href="/index" class="logo">NIHAR</a>
+         <span class="menu-toggle">&#9776;</span>
+         <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="#">CV</a></li>
+         </ul>
+      </nav>
+      <!-- Main Content -->
+      <div class="content py-10">
+         <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+                <div class="p-6">
+                   <h2 class="text-2xl font-bold text-gray-800 mb-4">Datascience capstone Project</h2>
+                   <p class="text-gray-600 leading-relaxed">
+                     Definition: A Data Science Capstone Project is a comprehensive, end-to-end data analysis or modeling project that applies learned skills to solve real-world problems.</br>
+                     What it does: Combines data collection, cleaning, modeling, and visualization to derive actionable insights.</br>
+                     Application: Demonstrates expertise in data science and showcases proficiency in handling complex datasets.</br>
+                     Outcome: Provides practical solutions and builds a strong portfolio for professional or academic growth.
+                     
+                   </p>
+                   <div class="button-container">
+                      <a href="#" class="custom-button">Pdf</a>
+                      <a href="https://github.com/niharraju4/DataScienceCapstone" class="custom-button">GitHub</a>
+                      <a href="#" class="custom-button">Jupyter</a>
+                   </div>
+                </div>
+             </div>
+            <!-- Card 2 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">New York Uber</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Analysis of New York Uber data focuses on trends, patterns, and operational insights from ride-hailing services.</br>
+                     What it does: Examines key metrics like ride demand, popular routes, and peak usage times.</br>
+                     Application: Aids in optimizing operations, improving customer service, and urban planning decisions.</br>
+                     Advantage: Provides a data-driven approach to enhance the efficiency of ride-sharing services.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Uber_New_York/blob/main/Uber_Newyork_DataAnalysis.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Pancard</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: PAN (Permanent Account Number) is a unique identification code issued by the Indian Income Tax Department for financial transactions.</br>
+                     What it does: Tracks taxable income, financial transactions, and tax payments of individuals and entities.</br>
+                     Application: Mandatory for tax filing, opening bank accounts, and high-value transactions in India.</br>
+                     Advantage: Ensures accountability and helps in reducing financial fraud and tax evasion.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Pan-card" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Pan-card/blob/main/Pancardtampering.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Bitcoin</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Bitcoin is a decentralized digital currency that operates on blockchain technology without the need for a central authority.</br>
+                     What it does: Enables peer-to-peer transactions using cryptographic protocols for security and transparency.</br>
+                     Application: Used for payments, investments, and as a store of value in the global financial ecosystem.</br>
+                     Advantage: Offers low transaction costs, quick transfers, and financial inclusion for the unbanked.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Bitcoin" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Bitcoin/blob/main/Bitcoin_final.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+           
+            <!-- Card 5 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">loan data Experimentaion</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Loan data experimentation involves analyzing loan datasets to derive patterns and insights for risk assessment and decision-making.</br>
+                     What it does: Identifies trends like default probabilities, customer behavior, and loan approval criteria.</br>
+                     Application: Used by financial institutions for credit scoring, loan disbursement, and risk management.</br>
+                     Outcome: Improves decision-making and reduces financial risks for lenders.
+                     
+            
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Amazon Analysis</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Amazon analysis refers to the examination of data from Amazon's platform, including sales, reviews, and customer behavior.</br>
+                     What it does: Identifies patterns in product popularity, customer satisfaction, and market trends.</br>
+                     Application: Used by sellers to optimize pricing, improve product listings, and enhance marketing strategies.</br>
+                     Advantage: Drives data-backed decisions to increase profitability and customer engagement.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/amazon_analysis" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/amazon_analysis/blob/main/amazon_analysis.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Data cleaning with Pandas</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Data cleaning with Pandas involves preprocessing datasets using the Pandas library in Python to handle missing, duplicate, or inconsistent data.</br>
+                     What it does: Improves data quality by applying operations like filtering, filling missing values, and data type conversion.</br>
+                     Application: Prepares data for analysis, visualization, and machine learning pipelines.</br>
+                     Advantage: Ensures accuracy and reliability in data-driven projects.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Data_Cleaning-Pandas" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+           
+     
+        
+</div>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+     const toggle = document.querySelector(".menu-toggle");
+     const navMenu = document.querySelector(".navbar ul");
+ 
+     toggle.addEventListener("click", function () {
+       navMenu.classList.toggle("active");
+     });
+   });
+ </script>
+      <footer class="bg-black-800 text-gray-200 py-4">
+         <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
+         </div>
+      </footer>
+   </body>
+</html>

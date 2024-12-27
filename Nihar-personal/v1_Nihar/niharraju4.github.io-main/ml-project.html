@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfolio</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+      <style>
+         body {
+         /* background-color: #defcf9 !important; */
+         background-color: #defcf9!important;
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #000;
+         
+         position: fixed; /* Make the navbar fixed */
+         width: 100%; /* Ensure it spans the full width */
+         top: 0; /* Stick to the top */
+         z-index: 1000; /* Ensure it stays on top of other elements */
+         }
+         .navbar .logo {
+         color: #fff;
+         font-size: 1.5rem;
+         font-weight: bold;
+         text-decoration: none;
+         }
+         .navbar ul {
+         display: flex;
+         list-style: none;
+         }
+         .navbar ul li {
+         margin: 0 15px;
+         }
+         .navbar ul li a {
+         color: #fff;
+         text-decoration: none;
+         font-size: 1rem;
+         transition: color 0.3s ease;
+         }
+         .navbar ul li a:hover {
+         color: #1abc9c;
+         }
+         .menu-toggle {
+         display: none;
+         color: #fff;
+         font-size: 1.5rem;
+         cursor: pointer;
+         }
+         @media (max-width: 768px) {
+         .navbar ul {
+         display: none;
+         flex-direction: column;
+         margin-top: 10px;
+         width: 100%;
+         background-color: #000;
+         position: relative;
+         left: 0;
+         z-index: 999;
+         }
+         .navbar ul.active {
+         display:flow-root;
+         margin-top: 10px;
+         }
+         .navbar ul li {
+         text-align: center;
+         margin: 10px 0; 
+         }
+         .menu-toggle {
+         display: block;
+         z-index: 1000;
+         }
+         }
+         .card {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         background-color: rgba(0, 0, 0, 0.1);
+         color: #000;
+         margin-bottom: 10px; /* Reduce margin between cards */
+         border-radius: 3px;
+         }
+         .card:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+         }
+         .card h2 {
+         font-family: 'Open Sans Condensed', sans-serif;
+         }
+         footer {
+         background-color: #000;
+         color: #fff;
+         position: fixed; /* Make the footer fixed */
+         bottom: 0; /* Stick to the bottom */
+         width: 100%; /* Ensure it spans the full width */
+         }
+         .button-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 3px;
+         justify-content: center;
+         padding: 2px;
+        
+         }
+         .custom-button {
+         display: inline-block;
+         outline: none;
+         cursor: pointer;
+         font-weight: 500;
+         border: 1px solid transparent;
+         border-radius: 1px;
+         height: 36px;
+         line-height: 34px;
+         font-size: 14px;
+         color: #ffffff;
+         background-color: #007c89;
+         transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+         padding: 0 18px;
+         flex: 1 1 calc(20% - 10px);
+         text-align: center;
+         padding: 0 12px; /* Adjust for proper spacing */
+         white-space: nowrap; /* Prevent text from wrapping */
+         }
+         .custom-button:hover {
+         color: #ffffff;
+         background-color: #006570;
+         }
+         .content {
+         display: flex;
+         justify-content: flex-end; /* Align cards to the right */
+         padding-right: 20px; /* Minimum gap to frame */
+         }
+         .container {
+         max-width: 800px; /* Adjust width to control the card section size */
+         }
+      </style>
+   </head>
+  <body class="bg-teal-100">
+
+      <!-- Navigation Menu -->
+      <nav class="navbar">
+         <a href="/index" class="logo">NIHAR</a>
+         <span class="menu-toggle">&#9776;</span>
+         <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="#">CV</a></li>
+         </ul>
+      </nav>
+      <!-- Main Content -->
+      <div class="content  py-10">
+         <div class="container mx-auto px-4 space-y-4"> <!-- Reduce space-y to adjust spacing between cards -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+                <div class="p-6">
+                   <h2 class="text-2xl font-bold text-violet-500 mb-4 underline decoration-sky-500 ">Linear Regression</h2>
+                   <p class="text-gray-600 leading-relaxed">
+                     <a class="underline decoration-sky-500 underline">Definition</a> :Linear Regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables.</br>
+                     <a class="underline decoration-sky-500">What it does</a>: It predicts outcomes by fitting a straight line to the data points, minimizing the error between actual and predicted values.</br>
+                     <a class="underline decoration-sky-500">Application</a>: Commonly used in forecasting, risk assessment, and understanding relationships between variables.</br>
+                     <a class="underline decoration-sky-500">Limitation:</a> Assumes a linear relationship, which may not hold in complex datasets.
+
+                   </p>
+                   <div class="button-container">
+                      <a href="#" class="custom-button">Pdf</a>
+                      <a href="https://github.com/niharraju4/linear_R" class="custom-button">GitHub</a>
+                      <a href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/california_housing.ipynb" class="custom-button">Jupyter</a>
+                   </div>
+                </div>
+             </div>
+            <!-- Card 2 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-blue-600 mb-4">Multiple Linear Regression</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     <a class="underline decoration-sky-500">Definition</a>: Multiple Linear Regression models the relationship between one dependent variable and multiple independent variables.</br>
+                     <a class="underline decoration-sky-500">What it does</a>: Fits a hyperplane to the data, allowing for prediction based on multiple factors simultaneously.</br>
+                     <a class="underline decoration-sky-500">Application</a>: Used in economics, biology, and other fields for analyzing multidimensional data.</br>
+                     <a class="underline decoration-sky-500">Advantage</a> Advantage: Provides a more comprehensive understanding of variable interactions compared to simple linear regression.
+                     <a class="underline decoration-sky-500"></a>  
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Multiple_LinearRegression/blob/main/multipleLR.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Polynomial Linear Regression</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     <a class="underline decoration-sky-500">Definition</a>:Polynomial Regression extends Linear Regression by fitting a polynomial curve to the data instead of a straight line.</br>
+                     <a class="underline decoration-sky-500"> What it does</a>: Captures non-linear relationships between variables by including polynomial terms.</br>
+                     <a class="underline decoration-sky-500">Application</a>: Used in scenarios like curve fitting, stock price modeling, and environmental data analysis.</br>
+                     <a class="underline decoration-sky-500">Limitation</a>: Overfitting can occur if the polynomial degree is too high.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/polynomial_linearRegression/poly.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Navie baye’s</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Naive Bayes is a probabilistic algorithm based on Bayes' Theorem, assuming independence between predictors.</br>
+                     What it does: Classifies data by calculating the probability of a class given the features.</br>
+                     Application: Widely used in spam filtering, sentiment analysis, and document classification.</br>
+                     Advantage: Efficient for large datasets but assumes feature independence, which may not always hold.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="/https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/7-Naive%20Baye's.pdf" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/Naive_Bayes_algo/naive.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+         
+         
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Random Forest</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Random Forest is an ensemble learning method that combines multiple decision trees to improve accuracy.</br>
+                     What it does: Aggregates predictions from several trees to reduce overfitting and enhance generalization.</br>
+                     Application: Used in classification, regression, and feature selection across various industries.</br>
+                     Advantage: Handles missing data well and works effectively with large, complex datasets.
+                     
+            
+                  </p>
+                  <div class="button-container">
+                     <a href="https://github.com/niharraju4/Random_Forest-ML-/blob/main/RandomForest%20Regression.pdf" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Random_Forest-ML-/" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Decision Tree</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Decision Tree is a supervised learning algorithm that splits data into branches based on decision rules.</br>
+                     What it does: Breaks down complex decisions into simpler structures using a tree-like model.</br>
+                     Application: Common in medical diagnoses, credit scoring, and business decision-making.</br>
+                     Limitation: Prone to overfitting, which can reduce generalizability.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/tree/main/DecisionTree" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/DecisionTree/decisiontreeregressor.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4"> Logistic regression </h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Logistic Regression is used for binary classification, predicting the probability of an event occurring.</br>
+                     What it does: Fits a logistic function to the data, outputting probabilities instead of direct values.</br>
+                     Application: Widely used in healthcare (disease prediction) and marketing (customer churn analysis).</br>
+                     Advantage: Simple to implement and interpretable for binary classification tasks.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/tree/main/Logestic_Regression" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/Logestic_Regression/logestic.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Support Vector Machine</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: SVM is a supervised learning algorithm for classification and regression tasks.</br>
+                     What it does: Finds the optimal hyperplane that separates data points into distinct classes. </br>
+                     Application: Effective for image recognition, text classification, and bioinformatics.</br>
+                     Advantage: Works well with high-dimensional data and provides flexibility with kernel functions.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/SVM/svm.pdf" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/tree/main/SVM" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/Machine-learning/blob/main/SVM/svm_basic.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">K-Nearest Neighbors (KNN)</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: KNN is a simple, non-parametric algorithm used for classification and regression by comparing data points with their nearest neighbors.</br>
+                     What it does: Classifies or predicts based on the majority or average of the nearest neighbors.</br>
+                     Application: Used in recommendation systems, pattern recognition, and anomaly detection.</br>
+                     Limitation: Computationally expensive for large datasets due to the distance calculation for every query.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Gradient Boosting</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: Gradient Boosting is an ensemble learning algorithm that sequentially combines weak classifiers to improve accuracy.</br>
+                     What it does: Optimizes predictions by focusing on the errors of previous models and correcting them in subsequent iterations.</br>
+                     Application: Used in fraud detection, risk modeling, and structured data analysis.</br>
+                     Advantage: Provides high predictive accuracy but requires careful tuning to avoid overfitting.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="https://github.com/niharraju4/OpenCV/blob/1729608e209805472aa0ae3762ec5f0274cb7f7a/07_Gradient_Descent.ipynb#L4" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+             <!-- Card 4 -->
+             <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">XGBoost</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: XGBoost (Extreme Gradient Boosting) is a scalable, distributed gradient boosting library designed for high performance and efficiency.</br>
+                     What it does: Combines decision trees sequentially while minimizing errors using gradient descent.</br>
+                     Application: Widely used in Kaggle competitions, predictive modeling, and feature engineering.</br>
+                     Advantage: Offers regularization techniques to prevent overfitting and supports parallel computation for faster training.
+                     
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="#" class="custom-button">GitHub</a>
+                     <a href="#" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card bg-white shadow-lg overflow-hidden block">
+               <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">AdaBoost</h2>
+                  <p class="text-gray-600 leading-relaxed">
+                     Definition: AdaBoost (Adaptive Boosting) combines a series of weak classifiers to create a strong classifier by assigning weights to difficult examples.</br>
+                     What it does: Focuses on incorrectly classified samples in each iteration to improve accuracy.</br>
+                     Application: Used in image detection, sentiment analysis, and bioinformatics.</br>
+                     Advantage: Simple to implement and improves model performance by reducing bias and variance.
+                     
+         
+                  </p>
+                  <div class="button-container">
+                     <a href="#" class="custom-button">Pdf</a>
+                     <a href="https://github.com/niharraju4/AdaBoost/blob/main/" class="custom-button">Github</a>
+                     <a href="https://github.com/niharraju4/AdaBoost/blob/main/ada_boost_classifier.ipynb" class="custom-button">Jupyter</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Card 5 -->
+        
+      </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+           const toggle = document.querySelector(".menu-toggle");
+           const navMenu = document.querySelector(".navbar ul");
+       
+           toggle.addEventListener("click", function () {
+             navMenu.classList.toggle("active");
+           });
+         });
+       </script>
+      <footer class="bg-black-800 text-gray-200 py-4">
+         <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm">&copy; 2024 Nihar M. All Rights Reserved.</p>
+         </div>
+      </footer>
+   </body>
+</html>
